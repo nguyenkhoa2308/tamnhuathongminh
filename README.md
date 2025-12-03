@@ -1,36 +1,131 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Everest Light - Website Tấm Nhựa Polycarbonate
 
-## Getting Started
+Website giới thiệu và bán hàng cho thương hiệu **Everest Light** - chuyên cung cấp tấm nhựa lấy sáng Polycarbonate cao cấp.
 
-First, run the development server:
+## Tổng quan
+
+Website được xây dựng với Next.js 16, React 19 và Tailwind CSS 4, cung cấp trải nghiệm người dùng mượt mà với:
+
+- Trang chủ với slider, giới thiệu danh mục sản phẩm
+- Trang danh sách sản phẩm theo từng danh mục
+- Trang chi tiết sản phẩm với gallery ảnh, bảng giá, thông số kỹ thuật
+- Trang giới thiệu và liên hệ
+- Responsive design cho mọi thiết bị
+
+## Tech Stack
+
+- **Framework:** Next.js 16 (App Router)
+- **UI Library:** React 19
+- **Styling:** Tailwind CSS 4
+- **Icons:** Lucide React
+- **Carousel:** Swiper
+- **Language:** TypeScript
+
+## Cấu trúc thư mục
+
+```
+src/
+├── app/
+│   ├── home/
+│   │   └── components/     # Components trang chủ (HeroSlider, CategorySection, ...)
+│   ├── products/
+│   │   ├── [category]/
+│   │   │   ├── [slug]/
+│   │   │   │   └── page.tsx    # Trang chi tiết sản phẩm
+│   │   │   └── page.tsx        # Trang danh mục sản phẩm
+│   │   └── _component/         # Components dùng chung cho products
+│   ├── about/                  # Trang giới thiệu
+│   ├── contact/                # Trang liên hệ
+│   ├── layout.tsx
+│   └── page.tsx
+├── components/
+│   ├── layout/
+│   │   ├── Header.tsx          # Header với sticky navigation
+│   │   └── Footer.tsx
+│   └── ui/
+│       ├── ProductCard.tsx     # Card hiển thị sản phẩm
+│       ├── ImageGallery.tsx    # Gallery ảnh với zoom
+│       ├── CustomSelect.tsx    # Custom dropdown
+│       └── ...
+├── data/
+│   └── polycarbonate_products.json   # Dữ liệu sản phẩm
+├── lib/
+│   └── product.ts              # Helper functions cho products
+├── types/
+│   └── product.ts              # TypeScript types
+└── ...
+```
+
+## Danh mục sản phẩm
+
+1. **Polycarbonate Đặc** (`/products/polycarbonate-dac`)
+   - Trong suốt như kính, chịu lực gấp 200 lần
+
+2. **Polycarbonate Rỗng** (`/products/polycarbonate-rong`)
+   - Cấu trúc hộp rỗng, cách nhiệt - cách âm tốt
+
+3. **Polycarbonate Sóng** (`/products/polycarbonate-song`)
+   - Dạng sóng tròn/vuông, dễ lắp đặt với mái tôn
+
+4. **Phụ kiện lắp đặt** (`/products/phu-kien`)
+   - Nẹp nhôm, gioăng cao su, vít inox, keo chống dột
+
+## Bắt đầu
+
+### Yêu cầu
+
+- Node.js 18+
+- npm hoặc yarn
+
+### Cài đặt
+
+```bash
+# Clone repository
+git clone <repo-url>
+cd tamnhuathongminh
+
+# Cài đặt dependencies
+npm install
+```
+
+### Chạy Development Server
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Mở [http://localhost:3000](http://localhost:3000) để xem website.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Build Production
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run build
+npm start
+```
 
-## Learn More
+## Scripts
 
-To learn more about Next.js, take a look at the following resources:
+| Script | Mô tả |
+|--------|-------|
+| `npm run dev` | Chạy development server |
+| `npm run build` | Build production |
+| `npm start` | Chạy production server |
+| `npm run lint` | Kiểm tra linting |
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Tính năng chính
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- **Sticky Header**: Header cố định khi scroll xuống
+- **Product Gallery**: Zoom ảnh khi hover, lightbox khi click
+- **Price Table**: Bảng giá với tìm kiếm, sắp xếp, phân trang
+- **Responsive**: Tối ưu cho mobile, tablet, desktop
+- **SEO Ready**: Cấu trúc semantic HTML
 
-## Deploy on Vercel
+## Thông tin liên hệ
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- **Hotline:** 0976.110.266
+- **Email:** tongkhotamlopvn@gmail.com
+- **Địa chỉ:** Số 7 Ngọc Trục, Đại Mỗ, Nam Từ Liêm, Hà Nội
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+© 2024 Everest Light. All rights reserved.
