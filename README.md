@@ -59,12 +59,15 @@ src/
 ## Danh mục sản phẩm
 
 1. **Polycarbonate Đặc** (`/products/polycarbonate-dac`)
+
    - Trong suốt như kính, chịu lực gấp 200 lần
 
 2. **Polycarbonate Rỗng** (`/products/polycarbonate-rong`)
+
    - Cấu trúc hộp rỗng, cách nhiệt - cách âm tốt
 
 3. **Polycarbonate Sóng** (`/products/polycarbonate-song`)
+
    - Dạng sóng tròn/vuông, dễ lắp đặt với mái tôn
 
 4. **Phụ kiện lắp đặt** (`/products/phu-kien`)
@@ -105,12 +108,12 @@ npm start
 
 ## Scripts
 
-| Script | Mô tả |
-|--------|-------|
-| `npm run dev` | Chạy development server |
-| `npm run build` | Build production |
-| `npm start` | Chạy production server |
-| `npm run lint` | Kiểm tra linting |
+| Script          | Mô tả                   |
+| --------------- | ----------------------- |
+| `npm run dev`   | Chạy development server |
+| `npm run build` | Build production        |
+| `npm start`     | Chạy production server  |
+| `npm run lint`  | Kiểm tra linting        |
 
 ## Tính năng chính
 
@@ -123,8 +126,8 @@ npm start
 ## Thông tin liên hệ
 
 - **Hotline:** 0976.110.266
-- **Email:** tongkhotamlopvn@gmail.com
-- **Địa chỉ:** Số 7 Ngọc Trục, Đại Mỗ, Nam Từ Liêm, Hà Nội
+- **Email:** nhualaysangeverestlight@gmail.com
+- **Địa chỉ:** Ngọc Trục, Đại Mỗ, Nam Từ Liêm, Hà Nội
 
 ---
 

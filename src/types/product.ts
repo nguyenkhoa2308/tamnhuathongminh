@@ -88,7 +88,6 @@ export interface Product {
   price: number;
   price_formatted: string;
   unit: string;
-  url: string;
   short_description: string;
   thumbnail: string;
   images: ProductImage[];
@@ -99,9 +98,9 @@ export interface Product {
 
 export interface ProductsData {
   metadata: {
-    scraped_at: string;
+    // scraped_at: string;
     total_products: number;
-    source: string;
+    // source: string;
   };
   products: Product[];
 }

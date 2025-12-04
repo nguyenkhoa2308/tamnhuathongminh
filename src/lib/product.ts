@@ -17,19 +17,25 @@ export const categories: Category[] = [
     id: "polycarbonate_dac",
     slug: "polycarbonate_dac",
     urlSlug: "polycarbonate-dac",
-    name: "Tấm lợp lấy sáng Polycarbonate đặc",
+    name: "Tấm lấy sáng Polycarbonate đặc",
   },
   {
     id: "polycarbonate_rong",
     slug: "polycarbonate_rong",
     urlSlug: "polycarbonate-rong",
-    name: "Tấm lợp lấy sáng Polycarbonate rỗng",
+    name: "Tấm lấy sáng Polycarbonate rỗng",
   },
   {
     id: "polycarbonate_song",
     slug: "polycarbonate_song",
     urlSlug: "polycarbonate-song",
-    name: "Tấm lợp lấy sáng Polycarbonate dạng sóng",
+    name: "Tấm lấy sáng Polycarbonate sóng",
+  },
+  {
+    id: "phu_kien",
+    slug: "phu_kien",
+    urlSlug: "phu-kien",
+    name: "Phụ kiện",
   },
 ];
 
@@ -38,6 +44,7 @@ const categoryUrlMap: Record<string, string> = {
   "polycarbonate-dac": "polycarbonate_dac",
   "polycarbonate-rong": "polycarbonate_rong",
   "polycarbonate-song": "polycarbonate_song",
+  "phu-kien": "phu_kien",
 };
 
 export function getAllProducts(): Product[] {

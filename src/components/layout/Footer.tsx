@@ -110,7 +110,9 @@ export default function Footer() {
       {/* Stats Section */}
       <div
         className="relative bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: "url('/images/backgrounds/footer-stats.jpg')" }}
+        style={{
+          backgroundImage: "url('/images/backgrounds/footer-stats.jpg')",
+        }}
       >
         <div className="absolute inset-0 bg-primary/80"></div>
         <div className="container mx-auto px-4 py-10 relative z-10">
@@ -146,7 +148,7 @@ export default function Footer() {
                 <li className="flex items-start gap-3">
                   <MapPin className="w-5 h-5 text-[#D4AF37] flex-shrink-0 mt-0.5" />
                   <span className="text-gray-300 text-sm">
-                    Số 14 Phùng Khoang, Trung Văn, Nam Từ Liêm, Hà Nội
+                    Ngọc Trục, Đại Mỗ, Nam Từ Liêm, Hà Nội
                   </span>
                 </li>
                 <li className="flex items-start gap-3">
@@ -161,21 +163,21 @@ export default function Footer() {
                 <li className="flex items-start gap-3">
                   <Mail className="w-5 h-5 text-[#D4AF37] flex-shrink-0 mt-0.5" />
                   <Link
-                    href="mailto:tongkhotamlopvn@gmail.com"
+                    href="mailto:nhualaysangeverestlight@gmail.com"
                     className="text-gray-300 text-sm hover:text-[#D4AF37] transition-colors break-all"
                   >
-                    tongkhotamlopvn@gmail.com
+                    nhualaysangeverestlight@gmail.com
                   </Link>
                 </li>
                 <li className="flex items-start gap-3">
                   <Globe className="w-5 h-5 text-[#D4AF37] flex-shrink-0 mt-0.5" />
                   <Link
-                    href="https://www.tamnhualaysangpoly.com"
+                    href="https://nhualaysangeverestlight.com/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-gray-300 text-sm hover:text-[#D4AF37] transition-colors"
                   >
-                    www.tamnhualaysangpoly.com
+                    https://nhualaysangeverestlight.com/
                   </Link>
                 </li>
                 <li className="flex items-start gap-3">

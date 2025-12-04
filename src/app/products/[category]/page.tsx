@@ -3,7 +3,14 @@
 import { useState } from "react";
 import Link from "next/link";
 import { useParams } from "next/navigation";
-import { ChevronRight, ChevronLeft, Grid3X3, List } from "lucide-react";
+import {
+  ChevronRight,
+  ChevronLeft,
+  Grid3X3,
+  List,
+  SlidersHorizontal,
+  X,
+} from "lucide-react";
 import {
   categories,
   getProductsByCategory,
@@ -29,25 +36,15 @@ export default function CategoryPage() {
   const category = getCategoryBySlug(categorySlug);
   const categoryProducts = getProductsByCategory(categorySlug);
 
-  const [expandedCategories, setExpandedCategories] = useState<string[]>([
-    category?.id || "",
-  ]);
   const [viewMode, setViewMode] = useState<"grid" | "list">("grid");
   const [sortBy, setSortBy] = useState("default");
   const [currentPage, setCurrentPage] = useState(1);
   const [priceRange, setPriceRange] = useState({ min: 0, max: 0 });
+  const [showMobileFilter, setShowMobileFilter] = useState(false);
 
   if (!category) {
     notFound();
   }
-
-  const toggleCategory = (categoryId: string) => {
-    setExpandedCategories((prev) =>
-      prev.includes(categoryId)
-        ? prev.filter((id) => id !== categoryId)
-        : [...prev, categoryId]
-    );
-  };
 
   const handlePriceChange = (min: number, max: number) => {
     setPriceRange({ min, max });
@@ -114,80 +111,128 @@ export default function CategoryPage() {
       <section className="py-8">
         <div className="container mx-auto px-4">
           <div className="flex flex-col lg:flex-row gap-6">
-            {/* Sidebar */}
-            <aside className="lg:w-72 flex-shrink-0 sticky top-25 self-start">
-              {/* Categories */}
-              <div className="bg-white rounded-lg shadow-sm mb-4">
-                <div className="flex items-center gap-2 px-4 py-3 border-b border-gray-100">
-                  <div className="w-1 h-5 bg-primary rounded-full"></div>
-                  <h3 className="font-bold text-gray-800">Danh mục sản phẩm</h3>
-                </div>
-                <div className="py-2">
-                  <Link
-                    href="/products"
-                    className="block px-4 py-2.5 text-gray-700 hover:text-primary hover:bg-gray-50 transition-colors"
-                  >
-                    Tất cả sản phẩm
-                  </Link>
-                  {categories.map((cat) => (
-                    <div key={cat.id}>
-                      <div className="flex items-center justify-start">
-                        <Link
-                          href={`/products/${cat.urlSlug}`}
-                          className={`flex-1 py-2.5 px-4 transition-colors ${
-                            cat.urlSlug === categorySlug
-                              ? "text-primary font-semibold bg-primary/5"
-                              : "text-gray-700 hover:text-primary"
-                          }`}
-                        >
-                          {cat.name}
-                        </Link>
+            {/* Mobile Filter Toggle */}
+            <button
+              type="button"
+              onClick={() => setShowMobileFilter(true)}
+              className="lg:hidden flex items-center justify-center gap-2 w-full py-3 bg-white rounded-lg shadow-sm text-gray-700 font-semibold mb-2"
+            >
+              <SlidersHorizontal className="w-5 h-5" />
+              Bộ lọc & Danh mục
+            </button>
+
+            {/* Mobile Filter Overlay */}
+            <div
+              className={`fixed inset-0 bg-black/50 z-[100] lg:hidden transition-opacity duration-300 ${
+                showMobileFilter
+                  ? "opacity-100"
+                  : "opacity-0 pointer-events-none"
+              }`}
+              onClick={() => setShowMobileFilter(false)}
+            />
+
+            {/* Sidebar - Desktop & Mobile Drawer */}
+            <aside
+              className={`
+                fixed lg:relative top-0 left-0 h-full lg:h-auto w-[300px] max-w-[85vw] lg:w-72
+                bg-white lg:bg-transparent z-[101] lg:z-auto
+                transform transition-transform duration-300 lg:transform-none
+                ${showMobileFilter ? "translate-x-0" : "-translate-x-full lg:translate-x-0"}
+                flex-shrink-0 lg:sticky lg:top-25 lg:self-start
+                overflow-y-auto lg:overflow-visible
+              `}
+            >
+              {/* Mobile Filter Header */}
+              <div className="lg:hidden flex items-center justify-between p-4 bg-gradient-to-r from-[#996515] to-[#D4AF37] sticky top-0">
+                <span className="text-white font-bold text-lg">Bộ lọc</span>
+                <button
+                  type="button"
+                  onClick={() => setShowMobileFilter(false)}
+                  className="text-white hover:bg-white/20 p-2 rounded-full transition-colors"
+                  aria-label="Đóng bộ lọc"
+                >
+                  <X className="w-6 h-6" />
+                </button>
+              </div>
+
+              <div className="p-4 lg:p-0 space-y-4">
+                {/* Categories */}
+                <div className="bg-white rounded-lg shadow-sm">
+                  <div className="flex items-center gap-2 px-4 py-3 border-b border-gray-100">
+                    <div className="w-1 h-5 bg-primary rounded-full"></div>
+                    <h3 className="font-bold text-gray-800">
+                      Danh mục sản phẩm
+                    </h3>
+                  </div>
+                  <div className="py-2">
+                    <Link
+                      href="/products"
+                      className="block px-4 py-2.5 text-gray-700 hover:text-primary hover:bg-gray-50 transition-colors"
+                      onClick={() => setShowMobileFilter(false)}
+                    >
+                      Tất cả sản phẩm
+                    </Link>
+                    {categories.map((cat) => (
+                      <div key={cat.id}>
+                        <div className="flex items-center justify-start">
+                          <Link
+                            href={`/products/${cat.urlSlug}`}
+                            className={`flex-1 py-2.5 px-4 transition-colors ${
+                              cat.urlSlug === categorySlug
+                                ? "text-primary font-semibold bg-primary/5"
+                                : "text-gray-700 hover:text-primary"
+                            }`}
+                            onClick={() => setShowMobileFilter(false)}
+                          >
+                            {cat.name}
+                          </Link>
+                        </div>
                       </div>
-                    </div>
-                  ))}
+                    ))}
+                  </div>
                 </div>
-              </div>
 
-              {/* Price Filter */}
-              <div className="bg-white rounded-lg shadow-sm mb-4">
-                <div className="flex items-center gap-2 px-4 py-3 border-b border-gray-100">
-                  <div className="w-1 h-5 bg-primary rounded-full"></div>
-                  <h3 className="font-bold text-gray-800">Khoảng giá</h3>
+                {/* Price Filter */}
+                <div className="bg-white rounded-lg shadow-sm">
+                  <div className="flex items-center gap-2 px-4 py-3 border-b border-gray-100">
+                    <div className="w-1 h-5 bg-primary rounded-full"></div>
+                    <h3 className="font-bold text-gray-800">Khoảng giá</h3>
+                  </div>
+                  <div className="p-4">
+                    <PriceRangeFilter
+                      minPrice={priceRange.min}
+                      maxPrice={priceRange.max}
+                      onPriceChange={handlePriceChange}
+                    />
+                  </div>
                 </div>
-                <div className="p-4">
-                  <PriceRangeFilter
-                    minPrice={priceRange.min}
-                    maxPrice={priceRange.max}
-                    onPriceChange={handlePriceChange}
-                  />
-                </div>
-              </div>
 
-              {/* Filters */}
-              <div className="bg-white rounded-lg shadow-sm">
-                <div className="flex items-center gap-2 px-4 py-3 border-b border-gray-100">
-                  <div className="w-1 h-5 bg-primary rounded-full"></div>
-                  <h3 className="font-bold text-gray-800">Bộ lọc</h3>
-                </div>
-                <div className="p-4 space-y-3">
-                  <label className="flex items-center gap-3 cursor-pointer group">
-                    <input
-                      type="checkbox"
-                      className="custom-checkbox flex-shrink-0"
-                    />
-                    <span className="text-gray-600 group-hover:text-primary transition-colors">
-                      Sản phẩm hot
-                    </span>
-                  </label>
-                  <label className="flex items-center gap-3 cursor-pointer group">
-                    <input
-                      type="checkbox"
-                      className="custom-checkbox flex-shrink-0"
-                    />
-                    <span className="text-gray-600 group-hover:text-primary transition-colors">
-                      Đang giảm giá
-                    </span>
-                  </label>
+                {/* Filters */}
+                <div className="bg-white rounded-lg shadow-sm">
+                  <div className="flex items-center gap-2 px-4 py-3 border-b border-gray-100">
+                    <div className="w-1 h-5 bg-primary rounded-full"></div>
+                    <h3 className="font-bold text-gray-800">Bộ lọc</h3>
+                  </div>
+                  <div className="p-4 space-y-3">
+                    <label className="flex items-center gap-3 cursor-pointer group">
+                      <input
+                        type="checkbox"
+                        className="custom-checkbox flex-shrink-0"
+                      />
+                      <span className="text-gray-600 group-hover:text-primary transition-colors">
+                        Sản phẩm hot
+                      </span>
+                    </label>
+                    <label className="flex items-center gap-3 cursor-pointer group">
+                      <input
+                        type="checkbox"
+                        className="custom-checkbox flex-shrink-0"
+                      />
+                      <span className="text-gray-600 group-hover:text-primary transition-colors">
+                        Đang giảm giá
+                      </span>
+                    </label>
+                  </div>
                 </div>
               </div>
             </aside>
@@ -211,8 +256,8 @@ export default function CategoryPage() {
                       value={sortBy}
                       onChange={setSortBy}
                     />
-                    {/* View Mode */}
-                    <div className="flex border border-gray-200 rounded-lg overflow-hidden">
+                    {/* View Mode - Hidden on mobile (1 column) */}
+                    <div className="hidden sm:flex border border-gray-200 rounded-lg overflow-hidden">
                       <button
                         type="button"
                         onClick={() => setViewMode("grid")}

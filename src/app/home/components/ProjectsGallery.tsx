@@ -49,15 +49,15 @@ const projects = [
 
 export default function ProjectsGallery() {
   return (
-    <section className="py-16 bg-[#f5f5f5]">
+    <section className="py-10 md:py-16 bg-[#f5f5f5]">
       <div className="container mx-auto px-4">
         {/* Header */}
-        <div className="flex items-center gap-4 mb-8">
-          <div className="flex-1 h-[2px] bg-black"></div>
-          <h2 className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-[#996515] to-[#D4AF37] bg-clip-text text-transparent uppercase whitespace-nowrap">
-            Các Công Trình Đã Thực Hiện
+        <div className="flex items-center justify-center gap-4 mb-6 md:mb-8">
+          <div className="hidden md:block flex-1 h-[2px] bg-black"></div>
+          <h2 className="text-3xl font-bold bg-gradient-to-r from-[#996515] to-[#D4AF37] bg-clip-text text-transparent uppercase text-center">
+            Công Trình Tiêu Biểu
           </h2>
-          <div className="flex-1 h-[2px] bg-black"></div>
+          <div className="hidden md:block flex-1 h-[2px] bg-black"></div>
         </div>
 
         {/* Projects Grid - Desktop */}
@@ -175,11 +175,15 @@ export default function ProjectsGallery() {
         </div>
 
         {/* Projects Grid - Mobile/Tablet */}
-        <div className="lg:hidden grid grid-cols-2 gap-3">
-          {projects.map((project) => (
+        <div className="lg:hidden grid grid-cols-2 gap-2 sm:gap-3">
+          {projects.map((project, index) => (
             <div
               key={project.id}
-              className="relative aspect-square group overflow-hidden rounded-lg"
+              className={`relative group overflow-hidden rounded-lg ${
+                index === 0 || index === 3
+                  ? "aspect-[4/5]"
+                  : "aspect-square"
+              }`}
             >
               <Image
                 src={project.image}
@@ -187,8 +191,10 @@ export default function ProjectsGallery() {
                 fill
                 className="object-cover group-hover:scale-110 transition-transform duration-500"
               />
-              <div className="absolute bottom-2 left-2">
-                <span className="bg-primary text-white px-2 py-1 rounded text-xs font-semibold">
+              {/* Gradient overlay */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+              <div className="absolute bottom-2 left-2 right-2">
+                <span className="bg-primary/90 text-white px-2 py-1 rounded text-[10px] sm:text-xs font-semibold line-clamp-1">
                   {project.name}
                 </span>
               </div>

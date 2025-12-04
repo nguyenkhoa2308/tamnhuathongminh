@@ -79,11 +79,11 @@ export default function ImageGallery({ images, productName }: ImageGalleryProps)
   return (
     <>
       {/* Main Gallery */}
-      <div>
+      <div className="w-full">
         {/* Main Image with Zoom */}
         <div
           ref={imageContainerRef}
-          className="relative aspect-square bg-gray-100 rounded-lg overflow-hidden mb-4 cursor-zoom-in"
+          className="relative w-full aspect-square bg-gray-100 rounded-lg overflow-hidden mb-4 cursor-zoom-in"
           onMouseMove={handleMouseMove}
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
@@ -93,6 +93,7 @@ export default function ImageGallery({ images, productName }: ImageGalleryProps)
             src={images[selectedImage]}
             alt={productName}
             fill
+            sizes="(max-width: 1024px) 100vw, 50vw"
             className="object-cover"
             priority
           />
@@ -148,10 +149,15 @@ export default function ImageGallery({ images, productName }: ImageGalleryProps)
             );
           })()}
 
-          {/* Zoom hint */}
-          <div className="absolute bottom-4 left-4 flex items-center gap-2 bg-black/60 text-white text-sm px-3 py-1.5 rounded-full pointer-events-none">
+          {/* Zoom hint - Hidden on mobile/touch devices */}
+          <div className="hidden md:flex absolute bottom-4 left-4 items-center gap-2 bg-black/60 text-white text-sm px-3 py-1.5 rounded-full pointer-events-none">
             <ZoomIn className="w-4 h-4" />
             Di chuột để zoom, click để xem lớn
+          </div>
+          {/* Mobile hint */}
+          <div className="md:hidden absolute bottom-4 left-4 flex items-center gap-2 bg-black/60 text-white text-sm px-3 py-1.5 rounded-full pointer-events-none">
+            <ZoomIn className="w-4 h-4" />
+            Nhấn để xem lớn
           </div>
         </div>
 
@@ -209,6 +215,7 @@ export default function ImageGallery({ images, productName }: ImageGalleryProps)
                     src={img}
                     alt={`${productName} ${index + 1}`}
                     fill
+                    sizes="20vw"
                     className="object-cover"
                   />
                 </button>
@@ -273,11 +280,12 @@ export default function ImageGallery({ images, productName }: ImageGalleryProps)
               >
                 {images.map((img, index) => (
                   <SwiperSlide key={index}>
-                    <div className="relative aspect-square md:aspect-video max-h-[70vh] mx-auto">
+                    <div className="relative aspect-square md:aspect-video max-h-[70vh] w-full mx-auto">
                       <Image
                         src={img}
                         alt={`${productName} ${index + 1}`}
                         fill
+                        sizes="100vw"
                         className="object-contain"
                         priority={index === selectedImage}
                       />
@@ -320,6 +328,7 @@ export default function ImageGallery({ images, productName }: ImageGalleryProps)
                         src={img}
                         alt={`${productName} ${index + 1}`}
                         fill
+                        sizes="10vw"
                         className="object-cover"
                       />
                     </button>

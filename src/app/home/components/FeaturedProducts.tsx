@@ -3,6 +3,7 @@
 import { useState, useRef, useEffect } from "react";
 import Link from "next/link";
 import { Swiper, SwiperSlide } from "swiper/react";
+import type { Swiper as SwiperType } from "swiper";
 import "swiper/css";
 import "swiper/css/navigation";
 import { Navigation } from "swiper/modules";
@@ -24,6 +25,7 @@ export default function FeaturedProducts() {
   const [activeTab, setActiveTab] = useState(tabs[0]?.id || "dac");
   const [indicatorStyle, setIndicatorStyle] = useState({ left: 0, width: 0 });
   const tabsRef = useRef<(HTMLButtonElement | null)[]>([]);
+  const tabSwiperRef = useRef<SwiperType | null>(null);
 
   useEffect(() => {
     const activeIndex = tabs.findIndex((tab) => tab.id === activeTab);
@@ -35,6 +37,14 @@ export default function FeaturedProducts() {
       });
     }
   }, [activeTab]);
+
+  const handleTabChange = (tabId: string, index: number) => {
+    setActiveTab(tabId);
+    // Sync mobile swiper when clicking tab on desktop
+    if (tabSwiperRef.current) {
+      tabSwiperRef.current.slideTo(index);
+    }
+  };
 
   const activeCategory = getCategoryById(activeTab);
   const categoryUrlSlug = activeCategory?.urlSlug || "";
@@ -55,25 +65,27 @@ export default function FeaturedProducts() {
           </p>
         </div>
 
-        {/* Tabs */}
-        <div className="flex justify-center gap-8 mb-8 border-b border-gray-200 relative">
-          {tabs.map((tab, index) => (
-            <button
-              type="button"
-              key={tab.id}
-              ref={(el) => {
-                tabsRef.current[index] = el;
-              }}
-              onClick={() => setActiveTab(tab.id)}
-              className={`pb-3 px-2 text-xl font-bold transition-colors duration-300 ${
-                activeTab === tab.id
-                  ? "text-primary"
-                  : "text-gray-500 hover:text-gray-700"
-              }`}
-            >
-              {tab.name}
-            </button>
-          ))}
+        {/* Tabs - Desktop (>1400px) */}
+        <div className="relative mb-8 hidden min-[1400px]:block">
+          <div className="flex gap-8 pb-3 border-b border-gray-200 justify-center">
+            {tabs.map((tab, index) => (
+              <button
+                type="button"
+                key={tab.id}
+                ref={(el) => {
+                  tabsRef.current[index] = el;
+                }}
+                onClick={() => handleTabChange(tab.id, index)}
+                className={`pb-3 px-4 text-xl font-bold transition-colors duration-300 whitespace-nowrap ${
+                  activeTab === tab.id
+                    ? "text-primary"
+                    : "text-gray-500 hover:text-gray-700"
+                }`}
+              >
+                {tab.name}
+              </button>
+            ))}
+          </div>
           {/* Animated indicator */}
           <span
             className="absolute bottom-0 h-0.5 bg-primary transition-all duration-300 ease-in-out"
@@ -82,6 +94,49 @@ export default function FeaturedProducts() {
               width: indicatorStyle.width,
             }}
           />
+        </div>
+
+        {/* Tabs - Mobile/Tablet Swiper (<1400px) */}
+        <div className="min-[1400px]:hidden mb-6">
+          <Swiper
+            onSwiper={(swiper) => {
+              tabSwiperRef.current = swiper;
+            }}
+            onSlideChange={(swiper) => {
+              const newTab = tabs[swiper.activeIndex];
+              if (newTab) {
+                setActiveTab(newTab.id);
+              }
+            }}
+            slidesPerView="auto"
+            centeredSlides={true}
+            spaceBetween={8}
+            className="tabs-swiper"
+          >
+            {tabs.map((tab) => (
+              <SwiperSlide key={tab.id} className="!w-auto">
+                <button
+                  type="button"
+                  onClick={() => {
+                    const index = tabs.findIndex((t) => t.id === tab.id);
+                    if (tabSwiperRef.current) {
+                      tabSwiperRef.current.slideTo(index);
+                    }
+                  }}
+                  className={`px-4 py-2 rounded-full text-sm font-bold transition-all duration-300 whitespace-nowrap ${
+                    activeTab === tab.id
+                      ? "bg-gradient-to-r from-[#996515] to-[#D4AF37] text-white shadow-md"
+                      : "bg-gray-100 text-gray-600"
+                  }`}
+                >
+                  {tab.name}
+                </button>
+              </SwiperSlide>
+            ))}
+          </Swiper>
+          <p className="text-center text-xs text-gray-400 mt-2">
+            ← Vuốt để xem danh mục khác →
+          </p>
         </div>
 
         {/* Products Carousel */}

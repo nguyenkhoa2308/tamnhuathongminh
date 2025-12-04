@@ -73,7 +73,7 @@ export default function ContactPage() {
                   <div>
                     <p className="text-sm text-gray-500">Email</p>
                     <p className="font-bold text-gray-800">
-                      tongkhotamlopvn@gmail.com
+                      nhualaysangeverestlight@gmail.com
                     </p>
                   </div>
                 </div>
@@ -86,7 +86,7 @@ export default function ContactPage() {
                   <div>
                     <p className="text-sm text-gray-500">Website</p>
                     <p className="font-bold text-gray-800">
-                      www.tamnhualaysangpoly.com
+                      nhualaysangeverestlight.com
                     </p>
                   </div>
                 </div>
@@ -147,10 +147,10 @@ export default function ContactPage() {
                   <div>
                     <span className="font-semibold text-gray-700">Email:</span>{" "}
                     <Link
-                      href="mailto:tongkhotamlopvn@gmail.com"
+                      href="mailto:nhualaysangeverestlight@gmail.com"
                       className="text-primary hover:underline"
                     >
-                      tongkhotamlopvn@gmail.com
+                      nhualaysangeverestlight@gmail.com
                     </Link>
                   </div>
                 </div>

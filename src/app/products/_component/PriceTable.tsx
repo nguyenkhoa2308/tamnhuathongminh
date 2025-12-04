@@ -107,9 +107,9 @@ export default function PriceTable({ title, data }: Props) {
       )}
 
       {/* Controls */}
-      <div className="flex flex-wrap justify-between items-center mb-4 gap-4">
+      <div className="flex flex-col sm:flex-row sm:flex-wrap justify-between items-stretch sm:items-center mb-4 gap-3">
         <div className="flex items-center gap-2">
-          <span className="text-gray-600">Xem</span>
+          <span className="text-gray-600 text-sm">Xem</span>
           <CustomSelect
             options={pageSizeOptions}
             value={pageSize}
@@ -117,35 +117,32 @@ export default function PriceTable({ title, data }: Props) {
               setPageSize(val);
               setCurrentPage(1);
             }}
-            minWidth="100px"
+            minWidth="80px"
           />
-          <span className="text-gray-600">mục</span>
+          <span className="text-gray-600 text-sm">mục</span>
         </div>
-        <div className="flex items-center gap-2">
-          <span className="text-gray-600">Tìm:</span>
-          <div className="relative">
-            <input
-              type="text"
-              value={search}
-              onChange={(e) => {
-                setSearch(e.target.value);
-                setCurrentPage(1);
-              }}
-              placeholder="Tìm kiếm..."
-              className="w-48 pl-10 pr-4 py-2.5 border-2 border-gray-200 rounded-lg text-gray-700
-                focus:outline-none focus:border-primary focus:shadow-[0_0_0_3px_rgba(153,101,21,0.15)]
-                transition-all duration-150"
-            />
-            <Search
-              size={18}
-              className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400"
-            />
-          </div>
+        <div className="relative flex-1 sm:flex-initial">
+          <input
+            type="text"
+            value={search}
+            onChange={(e) => {
+              setSearch(e.target.value);
+              setCurrentPage(1);
+            }}
+            placeholder="Tìm kiếm..."
+            className="w-full sm:w-48 pl-10 pr-4 py-2.5 border-2 border-gray-200 rounded-lg text-gray-700
+              focus:outline-none focus:border-primary focus:shadow-[0_0_0_3px_rgba(153,101,21,0.15)]
+              transition-all duration-150"
+          />
+          <Search
+            size={18}
+            className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400"
+          />
         </div>
       </div>
 
-      {/* Table */}
-      <div className="overflow-x-auto border border-gray-200 rounded-lg">
+      {/* Table - Desktop */}
+      <div className="hidden sm:block border border-gray-200 rounded-lg overflow-hidden">
         <table className="w-full">
           <thead className="bg-blue-50">
             <tr>
@@ -227,12 +224,39 @@ export default function PriceTable({ title, data }: Props) {
         </table>
       </div>
 
+      {/* Cards - Mobile */}
+      <div className="sm:hidden space-y-3">
+        {paginatedData.map((row, i) => (
+          <div
+            key={i}
+            className="border border-gray-200 rounded-lg p-4 bg-white"
+          >
+            <div className="flex items-center justify-between mb-3">
+              <span className="text-xs text-gray-500">
+                #{(currentPage - 1) * pageSizeNum + i + 1}
+              </span>
+              <span className="text-lg font-bold text-primary">
+                {row.price_formatted}
+              </span>
+            </div>
+            <div className="flex items-center justify-between">
+              <div>
+                <div className="text-xs text-gray-500 uppercase">Độ dày</div>
+                <div className="font-semibold text-gray-800">{row.thickness}</div>
+              </div>
+              <div className="text-right">
+                <div className="text-xs text-gray-500 uppercase">Đơn vị</div>
+                <div className="text-gray-600">Mét vuông</div>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+
       {/* Pagination */}
-      <div className="flex flex-wrap justify-between items-center mt-4 text-sm text-gray-600 gap-4">
-        <div>
-          Đang xem {(currentPage - 1) * pageSizeNum + 1} đến{" "}
-          {Math.min(currentPage * pageSizeNum, sortedData.length)} trong tổng số{" "}
-          {sortedData.length} mục
+      <div className="flex flex-col sm:flex-row justify-between items-center mt-4 text-sm text-gray-600 gap-3">
+        <div className="text-center sm:text-left">
+          Đang xem {(currentPage - 1) * pageSizeNum + 1} - {Math.min(currentPage * pageSizeNum, sortedData.length)} / {sortedData.length}
         </div>
         <div className="flex items-center gap-1">
           <button

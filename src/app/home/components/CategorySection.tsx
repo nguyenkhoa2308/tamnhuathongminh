@@ -95,17 +95,21 @@ export default function CategorySection() {
               <SwiperSlide key={cat.id} className="!h-auto">
                 <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 group/card h-full flex flex-col cursor-grab">
                   <div className="relative h-48 flex-shrink-0">
-                    <Image
-                      src={cat.image}
-                      alt={cat.name}
-                      fill
-                      className="object-cover group-hover/card:scale-105 transition-transform duration-300 cursor-pointer"
-                    />
+                    <Link href={cat.href}>
+                      <Image
+                        src={cat.image}
+                        alt={cat.name}
+                        fill
+                        className="object-cover group-hover/card:scale-105 transition-transform duration-300 cursor-pointer"
+                      />
+                    </Link>
                   </div>
                   <div className="p-4 flex flex-col flex-grow">
-                    <h3 className="font-bold text-lg mb-2 group-hover/card:text-primary transition-colors duration-300">
-                      {cat.name}
-                    </h3>
+                    <Link href={cat.href}>
+                      <h3 className="font-bold text-lg mb-2 group-hover/card:text-primary transition-colors duration-300">
+                        {cat.name}
+                      </h3>
+                    </Link>
                     <p
                       className="text-sm text-gray-700 flex-grow"
                       dangerouslySetInnerHTML={{ __html: cat.description }}

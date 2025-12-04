@@ -4,7 +4,16 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
-import { ChevronDown, Mail, MapPin, PhoneIcon, Search } from "lucide-react";
+import {
+  ChevronDown,
+  ChevronRight,
+  Mail,
+  MapPin,
+  Menu,
+  PhoneIcon,
+  Search,
+  X,
+} from "lucide-react";
 
 const productSubItems = [
   { name: "Tấm Polycarbonate Đặc", href: "/products/polycarbonate-dac" },
@@ -17,14 +26,26 @@ const navItems = [
   { name: "TRANG CHỦ", href: "/" },
   { name: "GIỚI THIỆU", href: "/about" },
   { name: "SẢN PHẨM", href: "/products", hasDropdown: true },
-  // { name: "DỰ ÁN", href: "/projects" },
   { name: "LIÊN HỆ", href: "/contact" },
 ];
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [showSticky, setShowSticky] = useState(false);
+  const [mobileProductsOpen, setMobileProductsOpen] = useState(false);
   const pathname = usePathname();
+
+  // Lock body scroll when mobile menu is open
+  useEffect(() => {
+    if (isMenuOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [isMenuOpen]);
 
   // Sticky header logic
   useEffect(() => {
@@ -65,8 +86,8 @@ export default function Header() {
     <>
       {/* Original Header */}
       <header className="bg-white shadow-md">
-        {/* Top bar */}
-        <div className="bg-primary text-white py-2">
+        {/* Top bar - Hidden on mobile */}
+        <div className="bg-primary text-white py-2 hidden md:block">
           <div className="container mx-auto px-4 flex flex-wrap justify-between items-center text-sm">
             <div className="flex items-center gap-4">
               <Link
@@ -77,22 +98,21 @@ export default function Header() {
               >
                 <MapPin className="w-7 h-7" />
                 <div className="flex flex-col font-semibold gap-1">
-                  <span>Địa chỉ</span>Số 7 Ngọc Trục, Đại Mỗ, Nam Từ Liêm, Hà
-                  Nội
+                  <span>Địa chỉ</span>Ngọc Trục, Đại Mỗ, Nam Từ Liêm, Hà Nội
                 </div>
               </Link>
               <Link
                 href="mailto:+84356786868"
-                className="hidden md:flex items-center gap-2 hover:text-yellow-400 transition-colors"
+                className="flex items-center gap-2 hover:text-yellow-400 transition-colors"
               >
                 <Mail className="w-7 h-7" />
                 <div className="flex flex-col font-semibold gap-1">
-                  <span>Mail</span>tongkhotamlopvn@gmail.com
+                  <span>Mail</span>nhualaysangeverestlight@gmail.com
                 </div>
               </Link>
               <Link
                 href="tel:+84936211116"
-                className="hidden md:flex items-center gap-2 hover:text-yellow-400 transition-colors"
+                className="flex items-center gap-2 hover:text-yellow-400 transition-colors"
               >
                 <PhoneIcon className="w-7 h-7" />
                 <div className="flex flex-col font-semibold gap-1">
@@ -106,8 +126,6 @@ export default function Header() {
                 placeholder="Tìm kiếm sản phẩm"
                 className="w-64 md:w-80 bg-white px-4 py-2 rounded-md text-gray-700 placeholder-gray-400 outline-none border border-white focus:border-red-600 transition-all duration-300"
               />
-
-              {/* Icon kính lúp */}
               <Search
                 className="w-5 h-5 absolute right-3 top-1/2 -translate-y-1/2 text-primary cursor-pointer"
                 strokeWidth={3}
@@ -192,71 +210,128 @@ export default function Header() {
             {/* Mobile Menu Toggle */}
             <button
               type="button"
-              className="lg:hidden text-gray-600 hover:text-orange-500 transition-colors"
+              className="lg:hidden text-gray-600 hover:text-primary transition-colors p-2"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               aria-label="Menu"
             >
-              <svg
-                className="w-6 h-6"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                {isMenuOpen ? (
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M6 18L18 6M6 6l12 12"
-                  />
-                ) : (
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M4 6h16M4 12h16M4 18h16"
-                  />
-                )}
-              </svg>
+              <Menu className="w-6 h-6" />
             </button>
           </div>
         </div>
+      </header>
 
-        {/* Mobile Navigation */}
-        {isMenuOpen && (
-          <nav className="lg:hidden bg-white border-t">
-            {navItems.map((item) => (
-              <div key={item.name}>
+      {/* Mobile Menu Overlay */}
+      <div
+        className={`fixed inset-0 bg-black/50 z-[100] lg:hidden transition-opacity duration-300 ${
+          isMenuOpen ? "opacity-100" : "opacity-0 pointer-events-none"
+        }`}
+        onClick={() => setIsMenuOpen(false)}
+      />
+
+      {/* Mobile Slide-out Menu */}
+      <div
+        className={`fixed top-0 right-0 h-full w-[300px] max-w-[85vw] bg-white z-[101] lg:hidden transform transition-transform duration-300 ease-out shadow-2xl ${
+          isMenuOpen ? "translate-x-0" : "translate-x-full"
+        }`}
+      >
+        {/* Menu Header */}
+        <div className="flex items-center justify-between p-4 bg-gradient-to-r from-[#996515] to-[#D4AF37]">
+          <span className="text-white font-bold text-lg">Menu</span>
+          <button
+            type="button"
+            onClick={() => setIsMenuOpen(false)}
+            className="text-white hover:bg-white/20 p-2 rounded-full transition-colors"
+            aria-label="Đóng menu"
+          >
+            <X className="w-6 h-6" />
+          </button>
+        </div>
+
+        {/* Menu Items */}
+        <nav className="py-2 overflow-y-auto max-h-[calc(100vh-180px)]">
+          {navItems.map((item) => (
+            <div key={item.name}>
+              {item.hasDropdown ? (
+                <>
+                  <button
+                    type="button"
+                    onClick={() => setMobileProductsOpen(!mobileProductsOpen)}
+                    className={`w-full flex items-center justify-between px-5 py-4 font-semibold transition-colors ${
+                      isActive(item.href)
+                        ? "text-primary bg-primary/5"
+                        : "text-gray-700 hover:bg-gray-50"
+                    }`}
+                  >
+                    <span>{item.name}</span>
+                    <ChevronDown
+                      className={`w-5 h-5 transition-transform duration-200 ${
+                        mobileProductsOpen ? "rotate-180" : ""
+                      }`}
+                    />
+                  </button>
+                  <div
+                    className={`overflow-hidden transition-all duration-300 ${
+                      mobileProductsOpen ? "max-h-96" : "max-h-0"
+                    }`}
+                  >
+                    <div className="bg-gray-50 py-2">
+                      <Link
+                        href="/products"
+                        className="flex items-center gap-2 px-6 py-3 text-primary font-semibold hover:bg-gray-100 transition-colors"
+                        onClick={() => setIsMenuOpen(false)}
+                      >
+                        <ChevronRight className="w-4 h-4" />
+                        <span>Tất cả sản phẩm</span>
+                      </Link>
+                      {productSubItems.map((subItem) => (
+                        <Link
+                          key={subItem.name}
+                          href={subItem.href}
+                          className="flex items-center gap-2 px-6 py-3 text-gray-600 hover:text-primary hover:bg-gray-100 transition-colors"
+                          onClick={() => setIsMenuOpen(false)}
+                        >
+                          <ChevronRight className="w-4 h-4 text-primary" />
+                          <span>{subItem.name}</span>
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+                </>
+              ) : (
                 <Link
                   href={item.href}
-                  className={`block px-4 py-3 font-semibold transition-colors border-b ${
+                  className={`block px-5 py-4 font-semibold transition-colors ${
                     isActive(item.href)
-                      ? "text-primary bg-red-50"
-                      : "text-gray-700 hover:bg-orange-50 hover:text-primary"
+                      ? "text-primary bg-primary/5"
+                      : "text-gray-700 hover:bg-gray-50"
                   }`}
-                  onClick={() => !item.hasDropdown && setIsMenuOpen(false)}
+                  onClick={() => setIsMenuOpen(false)}
                 >
                   {item.name}
                 </Link>
-                {item.hasDropdown && (
-                  <div className="bg-gray-50">
-                    {productSubItems.map((subItem) => (
-                      <Link
-                        key={subItem.name}
-                        href={subItem.href}
-                        className="block px-8 py-2 text-gray-600 hover:text-orange-500 transition-colors border-b text-sm"
-                        onClick={() => setIsMenuOpen(false)}
-                      >
-                        {subItem.name}
-                      </Link>
-                    ))}
-                  </div>
-                )}
-              </div>
-            ))}
-          </nav>
-        )}
-      </header>
+              )}
+            </div>
+          ))}
+        </nav>
+
+        {/* Mobile Contact Info */}
+        <div className="absolute bottom-0 left-0 right-0 p-4 bg-gray-50 border-t">
+          <a
+            href="tel:0976110266"
+            className="flex items-center gap-3 p-3 bg-gradient-to-r from-[#996515] to-[#D4AF37] text-white rounded-lg mb-3"
+          >
+            <PhoneIcon className="w-5 h-5" />
+            <span className="font-semibold">0976.110.266</span>
+          </a>
+          <a
+            href="mailto:nhualaysangeverestlight@gmail.com"
+            className="flex items-center gap-3 p-3 bg-white border border-gray-200 rounded-lg text-gray-700 text-sm"
+          >
+            <Mail className="w-4 h-4 text-primary" />
+            <span className="truncate">nhualaysangeverestlight@gmail.com</span>
+          </a>
+        </div>
+      </div>
 
       {/* Sticky Header */}
       <div
@@ -341,61 +416,14 @@ export default function Header() {
             {/* Mobile Menu Toggle */}
             <button
               type="button"
-              className="lg:hidden text-gray-600 hover:text-orange-500 transition-colors"
+              className="lg:hidden text-gray-600 hover:text-primary transition-colors p-2"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               aria-label="Menu"
             >
-              <svg
-                className="w-6 h-6"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M4 6h16M4 12h16M4 18h16"
-                />
-              </svg>
+              <Menu className="w-6 h-6" />
             </button>
           </div>
         </div>
-
-        {/* Mobile Navigation for Sticky Header */}
-        {isMenuOpen && (
-          <nav className="lg:hidden bg-white border-t">
-            {navItems.map((item) => (
-              <div key={item.name}>
-                <Link
-                  href={item.href}
-                  className={`block px-4 py-3 font-semibold transition-colors border-b ${
-                    isActive(item.href)
-                      ? "text-primary bg-red-50"
-                      : "text-gray-700 hover:bg-orange-50 hover:text-primary"
-                  }`}
-                  onClick={() => !item.hasDropdown && setIsMenuOpen(false)}
-                >
-                  {item.name}
-                </Link>
-                {item.hasDropdown && (
-                  <div className="bg-gray-50">
-                    {productSubItems.map((subItem) => (
-                      <Link
-                        key={subItem.name}
-                        href={subItem.href}
-                        className="block px-8 py-2 text-gray-600 hover:text-orange-500 transition-colors border-b text-sm"
-                        onClick={() => setIsMenuOpen(false)}
-                      >
-                        {subItem.name}
-                      </Link>
-                    ))}
-                  </div>
-                )}
-              </div>
-            ))}
-          </nav>
-        )}
       </div>
     </>
   );
