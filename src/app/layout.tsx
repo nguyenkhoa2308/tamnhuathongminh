@@ -49,7 +49,7 @@ export default function RootLayout({
         <Header />
         <main>{children}</main>
 
-        {/* <FloatingButtons /> */}
+        <FloatingButtons />
         <Footer />
       </body>
     </html>
