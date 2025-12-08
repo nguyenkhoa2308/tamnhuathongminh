@@ -32,6 +32,11 @@ export default function ProductCard({
             fill
             className="object-cover group-hover:scale-105 transition-transform duration-300"
           />
+          {product.bestseller && (
+            <span className="absolute top-2 left-2 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded">
+              Bán chạy
+            </span>
+          )}
         </Link>
 
         {/* Info */}
@@ -93,6 +98,11 @@ export default function ProductCard({
           fill
           className="object-cover group-hover:scale-105 transition-transform duration-300"
         />
+        {product.bestseller && (
+          <span className="absolute top-2 left-2 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded">
+            Bán chạy
+          </span>
+        )}
       </Link>
 
       {/* Info */}

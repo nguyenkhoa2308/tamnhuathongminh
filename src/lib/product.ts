@@ -47,8 +47,17 @@ const categoryUrlMap: Record<string, string> = {
   "phu-kien": "phu_kien",
 };
 
+// Sort products with bestsellers first
+function sortBestsellersFirst(products: Product[]): Product[] {
+  return [...products].sort((a, b) => {
+    if (a.bestseller && !b.bestseller) return -1;
+    if (!a.bestseller && b.bestseller) return 1;
+    return 0;
+  });
+}
+
 export function getAllProducts(): Product[] {
-  return data.products;
+  return sortBestsellersFirst(data.products);
 }
 
 export function getProductBySlug(slug: string): Product | undefined {
@@ -58,7 +67,8 @@ export function getProductBySlug(slug: string): Product | undefined {
 export function getProductsByCategory(categorySlug: string): Product[] {
   // Support both URL slug and data slug
   const dataSlug = categoryUrlMap[categorySlug] || categorySlug;
-  return data.products.filter((p) => p.category_slug === dataSlug);
+  const filtered = data.products.filter((p) => p.category_slug === dataSlug);
+  return sortBestsellersFirst(filtered);
 }
 
 export function getAllSlugs(): string[] {

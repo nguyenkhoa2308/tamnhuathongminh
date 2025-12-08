@@ -88,6 +88,7 @@ export interface Product {
   price: number;
   price_formatted: string;
   unit: string;
+  bestseller?: boolean;
   short_description: string;
   thumbnail: string;
   images: ProductImage[];

@@ -23,26 +23,89 @@ const sortOptions = [
   { value: "price-desc", label: "Giá cao đến thấp" },
 ];
 
+// Get unique thicknesses from products
+function getUniqueThicknesses(products: ReturnType<typeof getAllProducts>) {
+  const thicknesses = new Set<string>();
+  products.forEach((p) => {
+    if (p.specs?.thickness) {
+      thicknesses.add(p.specs.thickness);
+    }
+  });
+  return Array.from(thicknesses).sort((a, b) => {
+    const numA = parseFloat(a.replace("mm", ""));
+    const numB = parseFloat(b.replace("mm", ""));
+    return numA - numB;
+  });
+}
+
 export default function ProductsPage() {
   const [viewMode, setViewMode] = useState<"grid" | "list">("grid");
   const [sortBy, setSortBy] = useState("default");
   const [currentPage, setCurrentPage] = useState(1);
   const [priceRange, setPriceRange] = useState({ min: 0, max: 0 });
   const [showMobileFilter, setShowMobileFilter] = useState(false);
+  const [showBestseller, setShowBestseller] = useState(false);
+  const [selectedThicknesses, setSelectedThicknesses] = useState<string[]>([]);
 
   const allProducts = getAllProducts();
+  const availableThicknesses = getUniqueThicknesses(allProducts);
 
   const handlePriceChange = (min: number, max: number) => {
     setPriceRange({ min, max });
     setCurrentPage(1);
   };
 
-  // Filter by price range
+  const handleThicknessToggle = (thickness: string) => {
+    setSelectedThicknesses((prev) =>
+      prev.includes(thickness)
+        ? prev.filter((t) => t !== thickness)
+        : [...prev, thickness]
+    );
+    setCurrentPage(1);
+  };
+
+  const handleBestsellerToggle = () => {
+    setShowBestseller((prev) => !prev);
+    setCurrentPage(1);
+  };
+
+  const handleClearFilters = () => {
+    setPriceRange({ min: 0, max: 0 });
+    setShowBestseller(false);
+    setSelectedThicknesses([]);
+    setCurrentPage(1);
+  };
+
+  const hasActiveFilters =
+    priceRange.min > 0 ||
+    priceRange.max > 0 ||
+    showBestseller ||
+    selectedThicknesses.length > 0;
+
+  // Filter products
   const filteredProducts = allProducts.filter((product) => {
-    if (priceRange.min === 0 && priceRange.max === 0) return true;
-    const price = product.price;
-    if (priceRange.max === 0) return price >= priceRange.min;
-    return price >= priceRange.min && price <= priceRange.max;
+    // Price filter
+    if (priceRange.min > 0 || priceRange.max > 0) {
+      const price = product.price;
+      if (priceRange.max === 0 && price < priceRange.min) return false;
+      if (
+        priceRange.max > 0 &&
+        (price < priceRange.min || price > priceRange.max)
+      )
+        return false;
+    }
+    // Bestseller filter
+    if (showBestseller && !product.bestseller) return false;
+    // Thickness filter
+    if (selectedThicknesses.length > 0) {
+      if (
+        !product.specs?.thickness ||
+        !selectedThicknesses.includes(product.specs.thickness)
+      ) {
+        return false;
+      }
+    }
+    return true;
   });
 
   const sortedProducts = [...filteredProducts].sort((a, b) => {
@@ -90,7 +153,7 @@ export default function ProductsPage() {
       {/* Main Content */}
       <section className="py-8">
         <div className="container mx-auto px-4">
-          <div className="flex flex-col lg:flex-row gap-6">
+          <div className="flex flex-col lg:flex-row lg:items-start gap-6">
             {/* Mobile Filter Toggle */}
             <button
               type="button"
@@ -114,16 +177,16 @@ export default function ProductsPage() {
             {/* Sidebar - Desktop & Mobile Drawer */}
             <aside
               className={`
-                fixed lg:relative top-0 left-0 h-full lg:h-auto w-[300px] max-w-[85vw] lg:w-72
-                bg-white lg:bg-transparent z-[101] lg:z-auto
-                transform transition-transform duration-300 lg:transform-none
-                ${showMobileFilter ? "translate-x-0" : "-translate-x-full lg:translate-x-0"}
-                flex-shrink-0 lg:sticky lg:top-25 lg:self-start
-                overflow-y-auto lg:overflow-visible
+                transform transition-transform duration-300
+                ${showMobileFilter
+                  ? "fixed top-0 left-0 h-full w-[300px] max-w-[85vw] z-[101] bg-white overflow-y-auto translate-x-0"
+                  : "fixed top-0 left-0 h-full w-[300px] max-w-[85vw] z-[101] bg-white overflow-y-auto -translate-x-full lg:relative lg:translate-x-0"}
+                lg:sticky lg:top-24 lg:h-fit lg:w-72 lg:z-auto lg:bg-transparent
+                lg:overflow-visible lg:self-start flex-shrink-0
               `}
             >
               {/* Mobile Filter Header */}
-              <div className="lg:hidden flex items-center justify-between p-4 bg-gradient-to-r from-[#996515] to-[#D4AF37] sticky top-0">
+              <div className="lg:hidden flex items-center justify-between p-4 bg-gradient-to-r from-[#996515] to-[#D4AF37] sticky top-0 z-10">
                 <span className="text-white font-bold text-lg">Bộ lọc</span>
                 <button
                   type="button"
@@ -183,7 +246,7 @@ export default function ProductsPage() {
                   </div>
                 </div>
 
-                {/* Filters */}
+                {/* Bestseller Filter */}
                 <div className="bg-white rounded-lg shadow-sm">
                   <div className="flex items-center gap-2 px-4 py-3 border-b border-gray-100">
                     <div className="w-1 h-5 bg-primary rounded-full"></div>
@@ -193,23 +256,53 @@ export default function ProductsPage() {
                     <label className="flex items-center gap-3 cursor-pointer group">
                       <input
                         type="checkbox"
+                        checked={showBestseller}
+                        onChange={handleBestsellerToggle}
                         className="custom-checkbox flex-shrink-0"
                       />
                       <span className="text-gray-600 group-hover:text-primary transition-colors">
-                        Sản phẩm hot
-                      </span>
-                    </label>
-                    <label className="flex items-center gap-3 cursor-pointer group">
-                      <input
-                        type="checkbox"
-                        className="custom-checkbox flex-shrink-0"
-                      />
-                      <span className="text-gray-600 group-hover:text-primary transition-colors">
-                        Đang giảm giá
+                        Sản phẩm bán chạy
                       </span>
                     </label>
                   </div>
                 </div>
+
+                {/* Thickness Filter */}
+                {availableThicknesses.length > 0 && (
+                  <div className="bg-white rounded-lg shadow-sm">
+                    <div className="flex items-center gap-2 px-4 py-3 border-b border-gray-100">
+                      <div className="w-1 h-5 bg-primary rounded-full"></div>
+                      <h3 className="font-bold text-gray-800">Độ dày</h3>
+                    </div>
+                    <div className="p-4 flex flex-wrap gap-2">
+                      {availableThicknesses.map((thickness) => (
+                        <button
+                          key={thickness}
+                          type="button"
+                          onClick={() => handleThicknessToggle(thickness)}
+                          className={`px-3 py-1.5 text-sm font-medium rounded-full border-2 transition-all ${
+                            selectedThicknesses.includes(thickness)
+                              ? "bg-primary border-primary text-white"
+                              : "bg-white border-gray-200 text-gray-600 hover:border-primary hover:text-primary"
+                          }`}
+                        >
+                          {thickness}
+                        </button>
+                      ))}
+                    </div>
+                  </div>
+                )}
+
+                {/* Clear Filters */}
+                {hasActiveFilters && (
+                  <button
+                    type="button"
+                    onClick={handleClearFilters}
+                    className="w-full py-2.5 text-red-500 font-semibold bg-red-50 hover:bg-red-100 rounded-lg transition-colors"
+                  >
+                    Xóa bộ lọc
+                  </button>
+                )}
               </div>
             </aside>
 
