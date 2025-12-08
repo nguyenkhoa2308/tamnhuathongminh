@@ -5,6 +5,7 @@ import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import FloatingButtons from "@/components/ui/FloatingButtons";
 import ScrollToTop from "@/components/ScrollToTop";
+import Script from "next/script";
 
 const oswald = Oswald({
   variable: "--font-oswald",
@@ -45,6 +46,22 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="vi">
+      <head>
+        {/* Load gtag.js */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=AW-16543237030"
+          strategy="afterInteractive"
+        />
+        {/* Đoạn config bạn gửi */}
+        <Script id="google-ads" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'AW-16543237030');
+          `}
+        </Script>
+      </head>
       <body
         className={`${oswald.variable} ${openSans.variable} antialiased font-opensans`}
       >
