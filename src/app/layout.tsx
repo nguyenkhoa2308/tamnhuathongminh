@@ -33,6 +33,9 @@ export const metadata: Metadata = {
     locale: "vi_VN",
     siteName: "Everest Light",
   },
+  icons: {
+    icon: "/favicon.ico",
+  },
 };
 
 export default function RootLayout({
