@@ -30,10 +30,13 @@ const navItems = [
 ];
 
 export default function Header() {
+  const pathname = usePathname();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [showSticky, setShowSticky] = useState(false);
-  const [mobileProductsOpen, setMobileProductsOpen] = useState(false);
-  const pathname = usePathname();
+  // Auto-expand products dropdown if on a product page
+  const isOnProductPage =
+    pathname === "/products" || pathname.startsWith("/products/");
+  const [mobileProductsOpen, setMobileProductsOpen] = useState(isOnProductPage);
 
   // Lock body scroll when mobile menu is open
   useEffect(() => {
@@ -81,6 +84,9 @@ export default function Header() {
     if (href === "/") return pathname === "/";
     return pathname === href || pathname.startsWith(href + "/");
   };
+
+  // Check if exact path matches (for sub-items)
+  const isExactActive = (href: string) => pathname === href;
 
   return (
     <>
@@ -211,7 +217,14 @@ export default function Header() {
             <button
               type="button"
               className="lg:hidden text-gray-600 hover:text-primary transition-colors p-2"
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              onClick={() => {
+                const opening = !isMenuOpen;
+                setIsMenuOpen(opening);
+                // Auto-expand products dropdown if on a product page
+                if (opening && isOnProductPage) {
+                  setMobileProductsOpen(true);
+                }
+              }}
               aria-label="Menu"
             >
               <Menu className="w-6 h-6" />
@@ -277,7 +290,11 @@ export default function Header() {
                     <div className="bg-gray-50 py-2">
                       <Link
                         href="/products"
-                        className="flex items-center gap-2 px-6 py-3 text-primary font-semibold hover:bg-gray-100 transition-colors"
+                        className={`flex items-center gap-2 px-6 py-3 transition-colors ${
+                          isExactActive("/products")
+                            ? "text-primary bg-primary/10 border-l-4 border-primary font-semibold"
+                            : "text-gray-600 hover:text-primary hover:bg-gray-100"
+                        }`}
                         onClick={() => setIsMenuOpen(false)}
                       >
                         <ChevronRight className="w-4 h-4" />
@@ -287,7 +304,11 @@ export default function Header() {
                         <Link
                           key={subItem.name}
                           href={subItem.href}
-                          className="flex items-center gap-2 px-6 py-3 text-gray-600 hover:text-primary hover:bg-gray-100 transition-colors"
+                          className={`flex items-center gap-2 px-6 py-3 transition-colors ${
+                            isExactActive(subItem.href)
+                              ? "text-primary font-semibold bg-primary/10 border-l-4 border-primary"
+                              : "text-gray-600 hover:text-primary hover:bg-gray-100"
+                          }`}
                           onClick={() => setIsMenuOpen(false)}
                         >
                           <ChevronRight className="w-4 h-4 text-primary" />
@@ -417,7 +438,14 @@ export default function Header() {
             <button
               type="button"
               className="lg:hidden text-gray-600 hover:text-primary transition-colors p-2"
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              onClick={() => {
+                const opening = !isMenuOpen;
+                setIsMenuOpen(opening);
+                // Auto-expand products dropdown if on a product page
+                if (opening && isOnProductPage) {
+                  setMobileProductsOpen(true);
+                }
+              }}
               aria-label="Menu"
             >
               <Menu className="w-6 h-6" />

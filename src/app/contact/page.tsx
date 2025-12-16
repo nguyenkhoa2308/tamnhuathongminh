@@ -43,17 +43,17 @@ export default function ContactPage() {
       <section className="relative z-20 -mt-16 px-4">
         <div className="container mx-auto">
           <div className="bg-white rounded-xl shadow-lg p-6">
-            <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6">
+            <div className="flex flex-col 2xl:flex-row lg:items-center lg:justify-between gap-6">
               {/* Brand Name */}
-              <div className="text-center lg:text-left">
+              <div className="text-center 2xl:text-left">
                 <p className="text-gray-600">Liên hệ với chúng tôi,</p>
-                <p className="text-xl font-bold bg-gradient-to-r from-[#996515] to-[#D4AF37] bg-clip-text text-transparent">
+                <p className="text-[17px] lg:text-xl font-bold bg-gradient-to-r from-[#996515] to-[#D4AF37] bg-clip-text text-transparent">
                   Everest Light - Tấm Nhựa Lấy Sáng
                 </p>
               </div>
 
               {/* Contact Items */}
-              <div className="flex flex-wrap justify-center lg:justify-end gap-6 lg:gap-8">
+              <div className="flex flex-wrap justify-start sm:justify-center lg:justify-end gap-6 lg:gap-8">
                 {/* Hotline */}
                 <div className="flex items-center gap-3">
                   <div className="w-12 h-12 rounded-full border-2 border-primary flex items-center justify-center">

@@ -27,8 +27,8 @@
       "name": "Tấm lấy sáng polycarbonate đặc 1.2mm",
       "category": "Tấm lợp lấy sáng Polycarbonate đặc",
       "category_slug": "polycarbonate_dac",
-      "price": 92000,
-      "price_formatted": "92.000₫",
+      "price": 105000,
+      "price_formatted": "105.000₫",
       "unit": "m²",
       "short_description": "Tấm Polycarbonate dạng đặc Everest Light - Trong suốt như kính, bền gấp 200 lần, chống UV tuyệt đối. Sản xuất từ nhựa nguyên sinh 100%, công nghệ Co-extrusion hiện đại.",
       "thumbnail": "/images/products/tam-polycarbonate-dac-ruot-2-mau.jpg",
@@ -54,203 +54,13 @@
           "caption": "Ứng dụng tấm polycarbonate đặc trong xây dựng"
         },
         {
-          "url": "/images/products/bang-gia.jpg",
+          "url": "/images/products/tam-lop-lay-sang-Polycarbonate-dac-6.jpg",
           "alt": "Tấm polycarbonate đặc Everest Light",
           "caption": "Tấm polycarbonate đặc Everest Light"
         }
       ],
       "specs": {
         "thickness": "1.2mm",
-        "product_line": "",
-        "sku": "TLPLYD001",
-        "length": "30m",
-        "colors": [
-          {
-            "name": "Xanh Hồ"
-          },
-          {
-            "name": "Trắng Trong"
-          }
-        ],
-        "widths": [
-          "1.22m",
-          "1.56m"
-        ]
-      },
-      "content": {
-        "intro": "Tấm Polycarbonate dạng đặc Everest Light được sản xuất từ nhựa nguyên sinh 100%, ứng dụng công nghệ đùn phức hợp Co-extrusion hiện đại, mang đến sản phẩm có độ trong suốt gần như kính nhưng bền vượt trội gấp hàng trăm lần.",
-        "sections": [
-          {
-            "type": "composition",
-            "title": "Tấm nhựa lấy sáng Polycarbonate dạng đặc (Solid Sheet)",
-            "body": "Trong suốt như kính – Bền gấp 200 lần – Chống UV tuyệt đối\n\nCấu trúc vô định hình (amorphous) của vật liệu, với các liên kết carbonate (-O–(C=O)–O–) và vòng thơm benzene cứng, giúp tấm vừa cứng chắc vừa dẻo dai – truyền sáng tự nhiên mà vẫn chịu được lực va đập cực lớn.\n\nỞ cấp độ phân tử, các vòng thơm ngăn sự sắp xếp tinh thể, tạo nên trạng thái trong suốt đồng nhất, không tán xạ ánh sáng. Nhờ vậy, tấm Polycarbonate dạng đặc đạt độ truyền sáng 88–90%, tương đương kính cường lực, nhưng trọng lượng nhẹ hơn 50% và chịu va đập gấp 200 lần.\n\nLớp phủ chống tia UV kép (UV Co-extrusion layer) ở bề mặt hoạt động như lá chắn quang học – hấp thụ và chuyển hóa tia cực tím thành nhiệt năng vô hại, bảo vệ vật liệu khỏi ố vàng và nứt gãy sau nhiều năm sử dụng."
-          },
-          {
-            "type": "image",
-            "url": "/images/products/tam-lop-lay-sang-polycarbonate-dac-ultralite-1.jpg",
-            "alt": "Tấm Polycarbonate đặc Everest Light",
-            "caption": "Tấm Polycarbonate đặc Everest Light"
-          },
-          {
-            "type": "pros_cons",
-            "title": "Ưu điểm kỹ thuật nổi bật",
-            "intro": "",
-            "pros": [
-              "Truyền sáng tự nhiên: Cấu trúc vô định hình giúp ánh sáng xuyên qua đều, không gây chói gắt.",
-              "Siêu bền, chống va đập: Độ dai va đập cao gấp 250 lần so với kính, chống vỡ vụn, an toàn tuyệt đối.",
-              "Cách nhiệt & chống nóng: Giảm truyền nhiệt, giữ không gian mát mẻ ngay cả trong điều kiện nắng gắt.",
-              "Chống tia UV đến 99%: Giúp bề mặt bền màu, không ngả vàng suốt 10–15 năm sử dụng.",
-              "Chống cháy & an toàn: Đạt chuẩn UL94 V-2 – vật liệu tự tắt khi gặp lửa.",
-              "Dễ thi công: Có thể uốn nguội tại công trường mà không nứt gãy, phù hợp cho các mái cong, giếng trời, nhà kính."
-            ],
-            "cons": []
-          },
-          {
-            "type": "image",
-            "url": "/images/products/tam-lop-lay-sang-polycarbonate-dac-ultralite-2.jpg",
-            "alt": "Ứng dụng tấm Polycarbonate đặc",
-            "caption": "Ứng dụng tấm Polycarbonate đặc"
-          },
-          {
-            "type": "price_table",
-            "title": "Bảng giá tấm lợp Polycarbonate đặc Everest Light",
-            "data": [
-              {
-                "thickness": "1.2mm",
-                "price": 92000,
-                "price_formatted": "92.000₫"
-              },
-              {
-                "thickness": "1.2mm Đủ",
-                "price": 110000,
-                "price_formatted": "110.000₫"
-              },
-              {
-                "thickness": "1.6mm",
-                "price": 155000,
-                "price_formatted": "155.000₫"
-              },
-              {
-                "thickness": "2mm",
-                "price": 235000,
-                "price_formatted": "235.000₫"
-              },
-              {
-                "thickness": "3mm",
-                "price": 365000,
-                "price_formatted": "365.000₫"
-              },
-              {
-                "thickness": "3.2mm",
-                "price": 420000,
-                "price_formatted": "420.000₫"
-              },
-              {
-                "thickness": "4mm",
-                "price": 425000,
-                "price_formatted": "425.000₫"
-              },
-              {
-                "thickness": "4.2mm",
-                "price": 465000,
-                "price_formatted": "465.000₫"
-              },
-              {
-                "thickness": "5mm",
-                "price": 495000,
-                "price_formatted": "495.000₫"
-              },
-              {
-                "thickness": "5.2mm",
-                "price": 525000,
-                "price_formatted": "525.000₫"
-              },
-              {
-                "thickness": "6mm",
-                "price": 650000,
-                "price_formatted": "650.000₫"
-              },
-              {
-                "thickness": "8mm",
-                "price": 950000,
-                "price_formatted": "950.000₫"
-              },
-              {
-                "thickness": "10mm",
-                "price": 1220000,
-                "price_formatted": "1.220.000₫"
-              }
-            ]
-          },
-          {
-            "type": "image",
-            "url": "/images/products/tam-lop-lay-sang-Polycarbonate-dac-6.jpg",
-            "alt": "Bảng giá tấm Polycarbonate đặc Everest Light",
-            "caption": "Bảng giá tấm Polycarbonate đặc Everest Light"
-          },
-          {
-            "type": "applications",
-            "title": "Ứng dụng thực tế",
-            "intro": "",
-            "items": [
-              "Mái giếng trời: Sảnh đón, trung tâm thương mại, showroom, khu nghỉ dưỡng.",
-              "Mái lấy sáng dân dụng cao cấp: Cửa chắn gió, vách ngăn lấy sáng.",
-              "Công trình thay thế kính: Các công trình cần vật liệu trong suốt, chống va đập, thay thế kính truyền thống."
-            ]
-          },
-          {
-            "type": "text",
-            "title": "Cam kết Everest Light",
-            "body": "Tấm nhựa Polycarbonate dạng đặc của Everest Light được sản xuất trên dây chuyền chuẩn Châu Âu, đạt tiêu chuẩn ISO & CE, bảo hành 15 năm không ố vàng, không giòn gãy.\n\nEverest Light – Giải pháp lấy sáng trong suốt, bền bỉ và an toàn cho mọi công trình hiện đại.\n\n• Trụ sở: Ngọc Trục, Đại Mỗ, Nam Từ Liêm, Hà Nội\n• Hotline: 0976.110.266\n• Email: nhualaysangeverestlight@gmail.com"
-          }
-        ]
-      },
-      "contact": {
-        "phone": "0976.110.266",
-        "email": "nhualaysangeverestlight@gmail.com",
-        "address": "Ngọc Trục, Đại Mỗ, Nam Từ Liêm, Hà Nội"
-      }
-    },
-    {
-      "id": "tam-lay-sang-polycarbonate-dac-1-2mm-du",
-      "slug": "tam-lay-sang-polycarbonate-dac-1-2mm-du",
-      "name": "Tấm lấy sáng polycarbonate đặc 1.2mm Đủ",
-      "category": "Tấm lợp lấy sáng Polycarbonate đặc",
-      "category_slug": "polycarbonate_dac",
-      "price": 110000,
-      "price_formatted": "110.000₫",
-      "unit": "m²",
-      "short_description": "Tấm Polycarbonate dạng đặc Everest Light - Trong suốt như kính, bền gấp 200 lần, chống UV tuyệt đối. Sản xuất từ nhựa nguyên sinh 100%, công nghệ Co-extrusion hiện đại.",
-      "thumbnail": "/images/products/tam-polycarbonate-dac-ruot-2-mau.jpg",
-      "images": [
-        {
-          "url": "/images/products/tam-polycarbonate-dac-ruot-2-mau.jpg",
-          "alt": "Tấm lấy sáng polycarbonate đặc 1.2mm Đủ",
-          "caption": "Tấm lấy sáng polycarbonate đặc 1.2mm Đủ"
-        },
-        {
-          "url": "/images/products/tam-lop-lay-sang-Polycarbonate-dac-2.jpg",
-          "alt": "Màu sắc đa dạng phù hợp với cả phong cách Âu và Á",
-          "caption": "Màu sắc đa dạng phù hợp với cả phong cách Âu và Á"
-        },
-        {
-          "url": "/images/products/tam-lop-lay-sang-Polycarbonate-dac-4.jpg",
-          "alt": "Tấm polycarbonate đặc chịu lực tốt",
-          "caption": "Tấm polycarbonate đặc chịu lực tốt"
-        },
-        {
-          "url": "/images/products/tam-lop-lay-sang-Polycarbonate-dac-5.jpg",
-          "alt": "Ứng dụng tấm polycarbonate đặc trong xây dựng",
-          "caption": "Ứng dụng tấm polycarbonate đặc trong xây dựng"
-        },
-        {
-          "url": "/images/products/bang-gia.jpg",
-          "alt": "Tấm polycarbonate đặc Everest Light",
-          "caption": "Tấm polycarbonate đặc Everest Light"
-        }
-      ],
-      "specs": {
-        "thickness": "1.2mm Đủ",
         "product_line": "",
         "sku": "TLPLYD002",
         "length": "30m",
@@ -307,53 +117,48 @@
             "data": [
               {
                 "thickness": "1.2mm",
-                "price": 92000,
-                "price_formatted": "92.000₫"
-              },
-              {
-                "thickness": "1.2mm Đủ",
-                "price": 110000,
-                "price_formatted": "110.000₫"
+                "price": 105000,
+                "price_formatted": "105.000₫"
               },
               {
                 "thickness": "1.6mm",
-                "price": 155000,
-                "price_formatted": "155.000₫"
+                "price": 140000,
+                "price_formatted": "140.000₫"
               },
               {
                 "thickness": "2mm",
-                "price": 235000,
-                "price_formatted": "235.000₫"
+                "price": 185000,
+                "price_formatted": "185.000₫"
               },
               {
                 "thickness": "3mm",
-                "price": 365000,
-                "price_formatted": "365.000₫"
+                "price": 295000,
+                "price_formatted": "295.000₫"
               },
               {
                 "thickness": "3.2mm",
-                "price": 420000,
-                "price_formatted": "420.000₫"
+                "price": 355000,
+                "price_formatted": "355.000₫"
               },
               {
                 "thickness": "4mm",
-                "price": 425000,
-                "price_formatted": "425.000₫"
+                "price": 385000,
+                "price_formatted": "385.000₫"
               },
               {
                 "thickness": "4.2mm",
-                "price": 465000,
-                "price_formatted": "465.000₫"
+                "price": 455000,
+                "price_formatted": "455.000₫"
               },
               {
                 "thickness": "5mm",
-                "price": 495000,
-                "price_formatted": "495.000₫"
+                "price": 480000,
+                "price_formatted": "480.000₫"
               },
               {
                 "thickness": "5.2mm",
-                "price": 525000,
-                "price_formatted": "525.000₫"
+                "price": 560000,
+                "price_formatted": "560.000₫"
               },
               {
                 "thickness": "6mm",
@@ -362,13 +167,13 @@
               },
               {
                 "thickness": "8mm",
-                "price": 950000,
-                "price_formatted": "950.000₫"
+                "price": 920000,
+                "price_formatted": "920.000₫"
               },
               {
                 "thickness": "10mm",
-                "price": 1220000,
-                "price_formatted": "1.220.000₫"
+                "price": 1040000,
+                "price_formatted": "1.040.000₫"
               }
             ]
           },
@@ -407,8 +212,8 @@
       "name": "Tấm lấy sáng polycarbonate đặc 1.6mm",
       "category": "Tấm lợp lấy sáng Polycarbonate đặc",
       "category_slug": "polycarbonate_dac",
-      "price": 155000,
-      "price_formatted": "155.000₫",
+      "price": 140000,
+      "price_formatted": "140.000₫",
       "unit": "m²",
       "short_description": "Tấm Polycarbonate dạng đặc Everest Light - Trong suốt như kính, bền gấp 200 lần, chống UV tuyệt đối. Sản xuất từ nhựa nguyên sinh 100%, công nghệ Co-extrusion hiện đại.",
       "thumbnail": "/images/products/tam-polycarbonate-dac-ruot-2-mau.jpg",
@@ -434,7 +239,7 @@
           "caption": "Ứng dụng tấm polycarbonate đặc trong xây dựng"
         },
         {
-          "url": "/images/products/bang-gia.jpg",
+          "url": "/images/products/tam-lop-lay-sang-Polycarbonate-dac-6.jpg",
           "alt": "Tấm polycarbonate đặc Everest Light",
           "caption": "Tấm polycarbonate đặc Everest Light"
         }
@@ -499,53 +304,48 @@
             "data": [
               {
                 "thickness": "1.2mm",
-                "price": 92000,
-                "price_formatted": "92.000₫"
-              },
-              {
-                "thickness": "1.2mm Đủ",
-                "price": 110000,
-                "price_formatted": "110.000₫"
+                "price": 105000,
+                "price_formatted": "105.000₫"
               },
               {
                 "thickness": "1.6mm",
-                "price": 155000,
-                "price_formatted": "155.000₫"
+                "price": 140000,
+                "price_formatted": "140.000₫"
               },
               {
                 "thickness": "2mm",
-                "price": 235000,
-                "price_formatted": "235.000₫"
+                "price": 185000,
+                "price_formatted": "185.000₫"
               },
               {
                 "thickness": "3mm",
-                "price": 365000,
-                "price_formatted": "365.000₫"
+                "price": 295000,
+                "price_formatted": "295.000₫"
               },
               {
                 "thickness": "3.2mm",
-                "price": 420000,
-                "price_formatted": "420.000₫"
+                "price": 355000,
+                "price_formatted": "355.000₫"
               },
               {
                 "thickness": "4mm",
-                "price": 425000,
-                "price_formatted": "425.000₫"
+                "price": 385000,
+                "price_formatted": "385.000₫"
               },
               {
                 "thickness": "4.2mm",
-                "price": 465000,
-                "price_formatted": "465.000₫"
+                "price": 455000,
+                "price_formatted": "455.000₫"
               },
               {
                 "thickness": "5mm",
-                "price": 495000,
-                "price_formatted": "495.000₫"
+                "price": 480000,
+                "price_formatted": "480.000₫"
               },
               {
                 "thickness": "5.2mm",
-                "price": 525000,
-                "price_formatted": "525.000₫"
+                "price": 560000,
+                "price_formatted": "560.000₫"
               },
               {
                 "thickness": "6mm",
@@ -554,13 +354,13 @@
               },
               {
                 "thickness": "8mm",
-                "price": 950000,
-                "price_formatted": "950.000₫"
+                "price": 920000,
+                "price_formatted": "920.000₫"
               },
               {
                 "thickness": "10mm",
-                "price": 1220000,
-                "price_formatted": "1.220.000₫"
+                "price": 1040000,
+                "price_formatted": "1.040.000₫"
               }
             ]
           },
@@ -599,8 +399,8 @@
       "name": "Tấm lấy sáng polycarbonate đặc 2mm",
       "category": "Tấm lợp lấy sáng Polycarbonate đặc",
       "category_slug": "polycarbonate_dac",
-      "price": 235000,
-      "price_formatted": "235.000₫",
+      "price": 185000,
+      "price_formatted": "185.000₫",
       "unit": "m²",
       "short_description": "Tấm Polycarbonate dạng đặc Everest Light - Trong suốt như kính, bền gấp 200 lần, chống UV tuyệt đối. Sản xuất từ nhựa nguyên sinh 100%, công nghệ Co-extrusion hiện đại.",
       "thumbnail": "/images/products/tam-polycarbonate-dac-ruot-2-mau.jpg",
@@ -626,7 +426,7 @@
           "caption": "Ứng dụng tấm polycarbonate đặc trong xây dựng"
         },
         {
-          "url": "/images/products/bang-gia.jpg",
+          "url": "/images/products/tam-lop-lay-sang-Polycarbonate-dac-6.jpg",
           "alt": "Tấm polycarbonate đặc Everest Light",
           "caption": "Tấm polycarbonate đặc Everest Light"
         }
@@ -691,53 +491,48 @@
             "data": [
               {
                 "thickness": "1.2mm",
-                "price": 92000,
-                "price_formatted": "92.000₫"
-              },
-              {
-                "thickness": "1.2mm Đủ",
-                "price": 110000,
-                "price_formatted": "110.000₫"
+                "price": 105000,
+                "price_formatted": "105.000₫"
               },
               {
                 "thickness": "1.6mm",
-                "price": 155000,
-                "price_formatted": "155.000₫"
+                "price": 140000,
+                "price_formatted": "140.000₫"
               },
               {
                 "thickness": "2mm",
-                "price": 235000,
-                "price_formatted": "235.000₫"
+                "price": 185000,
+                "price_formatted": "185.000₫"
               },
               {
                 "thickness": "3mm",
-                "price": 365000,
-                "price_formatted": "365.000₫"
+                "price": 295000,
+                "price_formatted": "295.000₫"
               },
               {
                 "thickness": "3.2mm",
-                "price": 420000,
-                "price_formatted": "420.000₫"
+                "price": 355000,
+                "price_formatted": "355.000₫"
               },
               {
                 "thickness": "4mm",
-                "price": 425000,
-                "price_formatted": "425.000₫"
+                "price": 385000,
+                "price_formatted": "385.000₫"
               },
               {
                 "thickness": "4.2mm",
-                "price": 465000,
-                "price_formatted": "465.000₫"
+                "price": 455000,
+                "price_formatted": "455.000₫"
               },
               {
                 "thickness": "5mm",
-                "price": 495000,
-                "price_formatted": "495.000₫"
+                "price": 480000,
+                "price_formatted": "480.000₫"
               },
               {
                 "thickness": "5.2mm",
-                "price": 525000,
-                "price_formatted": "525.000₫"
+                "price": 560000,
+                "price_formatted": "560.000₫"
               },
               {
                 "thickness": "6mm",
@@ -746,13 +541,13 @@
               },
               {
                 "thickness": "8mm",
-                "price": 950000,
-                "price_formatted": "950.000₫"
+                "price": 920000,
+                "price_formatted": "920.000₫"
               },
               {
                 "thickness": "10mm",
-                "price": 1220000,
-                "price_formatted": "1.220.000₫"
+                "price": 1040000,
+                "price_formatted": "1.040.000₫"
               }
             ]
           },
@@ -791,8 +586,8 @@
       "name": "Tấm lấy sáng polycarbonate đặc 3mm",
       "category": "Tấm lợp lấy sáng Polycarbonate đặc",
       "category_slug": "polycarbonate_dac",
-      "price": 365000,
-      "price_formatted": "365.000₫",
+      "price": 295000,
+      "price_formatted": "295.000₫",
       "unit": "m²",
       "bestseller": true,
       "short_description": "Tấm Polycarbonate dạng đặc Everest Light - Trong suốt như kính, bền gấp 200 lần, chống UV tuyệt đối. Sản xuất từ nhựa nguyên sinh 100%, công nghệ Co-extrusion hiện đại.",
@@ -824,7 +619,7 @@
           "caption": "Ứng dụng tấm polycarbonate đặc trong xây dựng"
         },
         {
-          "url": "/images/products/bang-gia.jpg",
+          "url": "/images/products/tam-lop-lay-sang-Polycarbonate-dac-6.jpg",
           "alt": "Tấm polycarbonate đặc Everest Light",
           "caption": "Tấm polycarbonate đặc Everest Light"
         }
@@ -901,53 +696,48 @@
             "data": [
               {
                 "thickness": "1.2mm",
-                "price": 92000,
-                "price_formatted": "92.000₫"
-              },
-              {
-                "thickness": "1.2mm Đủ",
-                "price": 110000,
-                "price_formatted": "110.000₫"
+                "price": 105000,
+                "price_formatted": "105.000₫"
               },
               {
                 "thickness": "1.6mm",
-                "price": 155000,
-                "price_formatted": "155.000₫"
+                "price": 140000,
+                "price_formatted": "140.000₫"
               },
               {
                 "thickness": "2mm",
-                "price": 235000,
-                "price_formatted": "235.000₫"
+                "price": 185000,
+                "price_formatted": "185.000₫"
               },
               {
                 "thickness": "3mm",
-                "price": 365000,
-                "price_formatted": "365.000₫"
+                "price": 295000,
+                "price_formatted": "295.000₫"
               },
               {
                 "thickness": "3.2mm",
-                "price": 420000,
-                "price_formatted": "420.000₫"
+                "price": 355000,
+                "price_formatted": "355.000₫"
               },
               {
                 "thickness": "4mm",
-                "price": 425000,
-                "price_formatted": "425.000₫"
+                "price": 385000,
+                "price_formatted": "385.000₫"
               },
               {
                 "thickness": "4.2mm",
-                "price": 465000,
-                "price_formatted": "465.000₫"
+                "price": 455000,
+                "price_formatted": "455.000₫"
               },
               {
                 "thickness": "5mm",
-                "price": 495000,
-                "price_formatted": "495.000₫"
+                "price": 480000,
+                "price_formatted": "480.000₫"
               },
               {
                 "thickness": "5.2mm",
-                "price": 525000,
-                "price_formatted": "525.000₫"
+                "price": 560000,
+                "price_formatted": "560.000₫"
               },
               {
                 "thickness": "6mm",
@@ -956,13 +746,13 @@
               },
               {
                 "thickness": "8mm",
-                "price": 950000,
-                "price_formatted": "950.000₫"
+                "price": 920000,
+                "price_formatted": "920.000₫"
               },
               {
                 "thickness": "10mm",
-                "price": 1220000,
-                "price_formatted": "1.220.000₫"
+                "price": 1040000,
+                "price_formatted": "1.040.000₫"
               }
             ]
           },
@@ -1001,8 +791,8 @@
       "name": "Tấm lấy sáng polycarbonate đặc 3.2mm",
       "category": "Tấm lợp lấy sáng Polycarbonate đặc",
       "category_slug": "polycarbonate_dac",
-      "price": 420000,
-      "price_formatted": "420.000₫",
+      "price": 355000,
+      "price_formatted": "355.000₫",
       "unit": "m²",
       "bestseller": true,
       "short_description": "Tấm Polycarbonate dạng đặc Everest Light - Trong suốt như kính, bền gấp 200 lần, chống UV tuyệt đối. Sản xuất từ nhựa nguyên sinh 100%, công nghệ Co-extrusion hiện đại.",
@@ -1034,7 +824,7 @@
           "caption": "Ứng dụng tấm polycarbonate đặc trong xây dựng"
         },
         {
-          "url": "/images/products/bang-gia.jpg",
+          "url": "/images/products/tam-lop-lay-sang-Polycarbonate-dac-6.jpg",
           "alt": "Tấm polycarbonate đặc Everest Light",
           "caption": "Tấm polycarbonate đặc Everest Light"
         }
@@ -1111,53 +901,48 @@
             "data": [
               {
                 "thickness": "1.2mm",
-                "price": 92000,
-                "price_formatted": "92.000₫"
-              },
-              {
-                "thickness": "1.2mm Đủ",
-                "price": 110000,
-                "price_formatted": "110.000₫"
+                "price": 105000,
+                "price_formatted": "105.000₫"
               },
               {
                 "thickness": "1.6mm",
-                "price": 155000,
-                "price_formatted": "155.000₫"
+                "price": 140000,
+                "price_formatted": "140.000₫"
               },
               {
                 "thickness": "2mm",
-                "price": 235000,
-                "price_formatted": "235.000₫"
+                "price": 185000,
+                "price_formatted": "185.000₫"
               },
               {
                 "thickness": "3mm",
-                "price": 365000,
-                "price_formatted": "365.000₫"
+                "price": 295000,
+                "price_formatted": "295.000₫"
               },
               {
                 "thickness": "3.2mm",
-                "price": 420000,
-                "price_formatted": "420.000₫"
+                "price": 355000,
+                "price_formatted": "355.000₫"
               },
               {
                 "thickness": "4mm",
-                "price": 425000,
-                "price_formatted": "425.000₫"
+                "price": 385000,
+                "price_formatted": "385.000₫"
               },
               {
                 "thickness": "4.2mm",
-                "price": 465000,
-                "price_formatted": "465.000₫"
+                "price": 455000,
+                "price_formatted": "455.000₫"
               },
               {
                 "thickness": "5mm",
-                "price": 495000,
-                "price_formatted": "495.000₫"
+                "price": 480000,
+                "price_formatted": "480.000₫"
               },
               {
                 "thickness": "5.2mm",
-                "price": 525000,
-                "price_formatted": "525.000₫"
+                "price": 560000,
+                "price_formatted": "560.000₫"
               },
               {
                 "thickness": "6mm",
@@ -1166,13 +951,13 @@
               },
               {
                 "thickness": "8mm",
-                "price": 950000,
-                "price_formatted": "950.000₫"
+                "price": 920000,
+                "price_formatted": "920.000₫"
               },
               {
                 "thickness": "10mm",
-                "price": 1220000,
-                "price_formatted": "1.220.000₫"
+                "price": 1040000,
+                "price_formatted": "1.040.000₫"
               }
             ]
           },
@@ -1211,8 +996,8 @@
       "name": "Tấm lấy sáng polycarbonate đặc 4mm",
       "category": "Tấm lợp lấy sáng Polycarbonate đặc",
       "category_slug": "polycarbonate_dac",
-      "price": 425000,
-      "price_formatted": "425.000₫",
+      "price": 385000,
+      "price_formatted": "385.000₫",
       "unit": "m²",
       "short_description": "Tấm Polycarbonate dạng đặc Everest Light - Trong suốt như kính, bền gấp 200 lần, chống UV tuyệt đối. Sản xuất từ nhựa nguyên sinh 100%, công nghệ Co-extrusion hiện đại.",
       "thumbnail": "/images/products/tam-polycarbonate-dac-ruot.jpg",
@@ -1243,7 +1028,7 @@
           "caption": "Ứng dụng tấm polycarbonate đặc trong xây dựng"
         },
         {
-          "url": "/images/products/bang-gia.jpg",
+          "url": "/images/products/tam-lop-lay-sang-Polycarbonate-dac-6.jpg",
           "alt": "Tấm polycarbonate đặc Everest Light",
           "caption": "Tấm polycarbonate đặc Everest Light"
         }
@@ -1320,53 +1105,48 @@
             "data": [
               {
                 "thickness": "1.2mm",
-                "price": 92000,
-                "price_formatted": "92.000₫"
-              },
-              {
-                "thickness": "1.2mm Đủ",
-                "price": 110000,
-                "price_formatted": "110.000₫"
+                "price": 105000,
+                "price_formatted": "105.000₫"
               },
               {
                 "thickness": "1.6mm",
-                "price": 155000,
-                "price_formatted": "155.000₫"
+                "price": 140000,
+                "price_formatted": "140.000₫"
               },
               {
                 "thickness": "2mm",
-                "price": 235000,
-                "price_formatted": "235.000₫"
+                "price": 185000,
+                "price_formatted": "185.000₫"
               },
               {
                 "thickness": "3mm",
-                "price": 365000,
-                "price_formatted": "365.000₫"
+                "price": 295000,
+                "price_formatted": "295.000₫"
               },
               {
                 "thickness": "3.2mm",
-                "price": 420000,
-                "price_formatted": "420.000₫"
+                "price": 355000,
+                "price_formatted": "355.000₫"
               },
               {
                 "thickness": "4mm",
-                "price": 425000,
-                "price_formatted": "425.000₫"
+                "price": 385000,
+                "price_formatted": "385.000₫"
               },
               {
                 "thickness": "4.2mm",
-                "price": 465000,
-                "price_formatted": "465.000₫"
+                "price": 455000,
+                "price_formatted": "455.000₫"
               },
               {
                 "thickness": "5mm",
-                "price": 495000,
-                "price_formatted": "495.000₫"
+                "price": 480000,
+                "price_formatted": "480.000₫"
               },
               {
                 "thickness": "5.2mm",
-                "price": 525000,
-                "price_formatted": "525.000₫"
+                "price": 560000,
+                "price_formatted": "560.000₫"
               },
               {
                 "thickness": "6mm",
@@ -1375,13 +1155,13 @@
               },
               {
                 "thickness": "8mm",
-                "price": 950000,
-                "price_formatted": "950.000₫"
+                "price": 920000,
+                "price_formatted": "920.000₫"
               },
               {
                 "thickness": "10mm",
-                "price": 1220000,
-                "price_formatted": "1.220.000₫"
+                "price": 1040000,
+                "price_formatted": "1.040.000₫"
               }
             ]
           },
@@ -1420,8 +1200,8 @@
       "name": "Tấm lấy sáng polycarbonate đặc 4.2mm",
       "category": "Tấm lợp lấy sáng Polycarbonate đặc",
       "category_slug": "polycarbonate_dac",
-      "price": 465000,
-      "price_formatted": "465.000₫",
+      "price": 455000,
+      "price_formatted": "455.000₫",
       "unit": "m²",
       "short_description": "Tấm Polycarbonate dạng đặc Everest Light - Trong suốt như kính, bền gấp 200 lần, chống UV tuyệt đối. Sản xuất từ nhựa nguyên sinh 100%, công nghệ Co-extrusion hiện đại.",
       "thumbnail": "/images/products/tam-polycarbonate-dac-ruot.jpg",
@@ -1452,7 +1232,7 @@
           "caption": "Ứng dụng tấm polycarbonate đặc trong xây dựng"
         },
         {
-          "url": "/images/products/bang-gia.jpg",
+          "url": "/images/products/tam-lop-lay-sang-Polycarbonate-dac-6.jpg",
           "alt": "Tấm polycarbonate đặc Everest Light",
           "caption": "Tấm polycarbonate đặc Everest Light"
         }
@@ -1529,53 +1309,48 @@
             "data": [
               {
                 "thickness": "1.2mm",
-                "price": 92000,
-                "price_formatted": "92.000₫"
-              },
-              {
-                "thickness": "1.2mm Đủ",
-                "price": 110000,
-                "price_formatted": "110.000₫"
+                "price": 105000,
+                "price_formatted": "105.000₫"
               },
               {
                 "thickness": "1.6mm",
-                "price": 155000,
-                "price_formatted": "155.000₫"
+                "price": 140000,
+                "price_formatted": "140.000₫"
               },
               {
                 "thickness": "2mm",
-                "price": 235000,
-                "price_formatted": "235.000₫"
+                "price": 185000,
+                "price_formatted": "185.000₫"
               },
               {
                 "thickness": "3mm",
-                "price": 365000,
-                "price_formatted": "365.000₫"
+                "price": 295000,
+                "price_formatted": "295.000₫"
               },
               {
                 "thickness": "3.2mm",
-                "price": 420000,
-                "price_formatted": "420.000₫"
+                "price": 355000,
+                "price_formatted": "355.000₫"
               },
               {
                 "thickness": "4mm",
-                "price": 425000,
-                "price_formatted": "425.000₫"
+                "price": 385000,
+                "price_formatted": "385.000₫"
               },
               {
                 "thickness": "4.2mm",
-                "price": 465000,
-                "price_formatted": "465.000₫"
+                "price": 455000,
+                "price_formatted": "455.000₫"
               },
               {
                 "thickness": "5mm",
-                "price": 495000,
-                "price_formatted": "495.000₫"
+                "price": 480000,
+                "price_formatted": "480.000₫"
               },
               {
                 "thickness": "5.2mm",
-                "price": 525000,
-                "price_formatted": "525.000₫"
+                "price": 560000,
+                "price_formatted": "560.000₫"
               },
               {
                 "thickness": "6mm",
@@ -1584,13 +1359,13 @@
               },
               {
                 "thickness": "8mm",
-                "price": 950000,
-                "price_formatted": "950.000₫"
+                "price": 920000,
+                "price_formatted": "920.000₫"
               },
               {
                 "thickness": "10mm",
-                "price": 1220000,
-                "price_formatted": "1.220.000₫"
+                "price": 1040000,
+                "price_formatted": "1.040.000₫"
               }
             ]
           },
@@ -1629,8 +1404,8 @@
       "name": "Tấm lấy sáng polycarbonate đặc 5mm",
       "category": "Tấm lợp lấy sáng Polycarbonate đặc",
       "category_slug": "polycarbonate_dac",
-      "price": 495000,
-      "price_formatted": "495.000₫",
+      "price": 480000,
+      "price_formatted": "480.000₫",
       "unit": "m²",
       "bestseller": true,
       "short_description": "Tấm Polycarbonate dạng đặc Everest Light - Trong suốt như kính, bền gấp 200 lần, chống UV tuyệt đối. Sản xuất từ nhựa nguyên sinh 100%, công nghệ Co-extrusion hiện đại.",
@@ -1662,7 +1437,7 @@
           "caption": "Ứng dụng tấm polycarbonate đặc trong xây dựng"
         },
         {
-          "url": "/images/products/bang-gia.jpg",
+          "url": "/images/products/tam-lop-lay-sang-Polycarbonate-dac-6.jpg",
           "alt": "Tấm polycarbonate đặc Everest Light",
           "caption": "Tấm polycarbonate đặc Everest Light"
         }
@@ -1739,53 +1514,48 @@
             "data": [
               {
                 "thickness": "1.2mm",
-                "price": 92000,
-                "price_formatted": "92.000₫"
-              },
-              {
-                "thickness": "1.2mm Đủ",
-                "price": 110000,
-                "price_formatted": "110.000₫"
+                "price": 105000,
+                "price_formatted": "105.000₫"
               },
               {
                 "thickness": "1.6mm",
-                "price": 155000,
-                "price_formatted": "155.000₫"
+                "price": 140000,
+                "price_formatted": "140.000₫"
               },
               {
                 "thickness": "2mm",
-                "price": 235000,
-                "price_formatted": "235.000₫"
+                "price": 185000,
+                "price_formatted": "185.000₫"
               },
               {
                 "thickness": "3mm",
-                "price": 365000,
-                "price_formatted": "365.000₫"
+                "price": 295000,
+                "price_formatted": "295.000₫"
               },
               {
                 "thickness": "3.2mm",
-                "price": 420000,
-                "price_formatted": "420.000₫"
+                "price": 355000,
+                "price_formatted": "355.000₫"
               },
               {
                 "thickness": "4mm",
-                "price": 425000,
-                "price_formatted": "425.000₫"
+                "price": 385000,
+                "price_formatted": "385.000₫"
               },
               {
                 "thickness": "4.2mm",
-                "price": 465000,
-                "price_formatted": "465.000₫"
+                "price": 455000,
+                "price_formatted": "455.000₫"
               },
               {
                 "thickness": "5mm",
-                "price": 495000,
-                "price_formatted": "495.000₫"
+                "price": 480000,
+                "price_formatted": "480.000₫"
               },
               {
                 "thickness": "5.2mm",
-                "price": 525000,
-                "price_formatted": "525.000₫"
+                "price": 560000,
+                "price_formatted": "560.000₫"
               },
               {
                 "thickness": "6mm",
@@ -1794,13 +1564,13 @@
               },
               {
                 "thickness": "8mm",
-                "price": 950000,
-                "price_formatted": "950.000₫"
+                "price": 920000,
+                "price_formatted": "920.000₫"
               },
               {
                 "thickness": "10mm",
-                "price": 1220000,
-                "price_formatted": "1.220.000₫"
+                "price": 1040000,
+                "price_formatted": "1.040.000₫"
               }
             ]
           },
@@ -1839,8 +1609,8 @@
       "name": "Tấm lấy sáng polycarbonate đặc 5.2mm",
       "category": "Tấm lợp lấy sáng Polycarbonate đặc",
       "category_slug": "polycarbonate_dac",
-      "price": 525000,
-      "price_formatted": "525.000₫",
+      "price": 560000,
+      "price_formatted": "560.000₫",
       "unit": "m²",
       "bestseller": true,
       "short_description": "Tấm Polycarbonate dạng đặc Everest Light - Trong suốt như kính, bền gấp 200 lần, chống UV tuyệt đối. Sản xuất từ nhựa nguyên sinh 100%, công nghệ Co-extrusion hiện đại.",
@@ -1872,7 +1642,7 @@
           "caption": "Ứng dụng tấm polycarbonate đặc trong xây dựng"
         },
         {
-          "url": "/images/products/bang-gia.jpg",
+          "url": "/images/products/tam-lop-lay-sang-Polycarbonate-dac-6.jpg",
           "alt": "Tấm polycarbonate đặc Everest Light",
           "caption": "Tấm polycarbonate đặc Everest Light"
         }
@@ -1949,53 +1719,48 @@
             "data": [
               {
                 "thickness": "1.2mm",
-                "price": 92000,
-                "price_formatted": "92.000₫"
-              },
-              {
-                "thickness": "1.2mm Đủ",
-                "price": 110000,
-                "price_formatted": "110.000₫"
+                "price": 105000,
+                "price_formatted": "105.000₫"
               },
               {
                 "thickness": "1.6mm",
-                "price": 155000,
-                "price_formatted": "155.000₫"
+                "price": 140000,
+                "price_formatted": "140.000₫"
               },
               {
                 "thickness": "2mm",
-                "price": 235000,
-                "price_formatted": "235.000₫"
+                "price": 185000,
+                "price_formatted": "185.000₫"
               },
               {
                 "thickness": "3mm",
-                "price": 365000,
-                "price_formatted": "365.000₫"
+                "price": 295000,
+                "price_formatted": "295.000₫"
               },
               {
                 "thickness": "3.2mm",
-                "price": 420000,
-                "price_formatted": "420.000₫"
+                "price": 355000,
+                "price_formatted": "355.000₫"
               },
               {
                 "thickness": "4mm",
-                "price": 425000,
-                "price_formatted": "425.000₫"
+                "price": 385000,
+                "price_formatted": "385.000₫"
               },
               {
                 "thickness": "4.2mm",
-                "price": 465000,
-                "price_formatted": "465.000₫"
+                "price": 455000,
+                "price_formatted": "455.000₫"
               },
               {
                 "thickness": "5mm",
-                "price": 495000,
-                "price_formatted": "495.000₫"
+                "price": 480000,
+                "price_formatted": "480.000₫"
               },
               {
                 "thickness": "5.2mm",
-                "price": 525000,
-                "price_formatted": "525.000₫"
+                "price": 560000,
+                "price_formatted": "560.000₫"
               },
               {
                 "thickness": "6mm",
@@ -2004,13 +1769,13 @@
               },
               {
                 "thickness": "8mm",
-                "price": 950000,
-                "price_formatted": "950.000₫"
+                "price": 920000,
+                "price_formatted": "920.000₫"
               },
               {
                 "thickness": "10mm",
-                "price": 1220000,
-                "price_formatted": "1.220.000₫"
+                "price": 1040000,
+                "price_formatted": "1.040.000₫"
               }
             ]
           },
@@ -2081,7 +1846,7 @@
           "caption": "Ứng dụng tấm polycarbonate đặc trong xây dựng"
         },
         {
-          "url": "/images/products/bang-gia.jpg",
+          "url": "/images/products/tam-lop-lay-sang-Polycarbonate-dac-6.jpg",
           "alt": "Tấm polycarbonate đặc Everest Light",
           "caption": "Tấm polycarbonate đặc Everest Light"
         }
@@ -2158,53 +1923,48 @@
             "data": [
               {
                 "thickness": "1.2mm",
-                "price": 92000,
-                "price_formatted": "92.000₫"
-              },
-              {
-                "thickness": "1.2mm Đủ",
-                "price": 110000,
-                "price_formatted": "110.000₫"
+                "price": 105000,
+                "price_formatted": "105.000₫"
               },
               {
                 "thickness": "1.6mm",
-                "price": 155000,
-                "price_formatted": "155.000₫"
+                "price": 140000,
+                "price_formatted": "140.000₫"
               },
               {
                 "thickness": "2mm",
-                "price": 235000,
-                "price_formatted": "235.000₫"
+                "price": 185000,
+                "price_formatted": "185.000₫"
               },
               {
                 "thickness": "3mm",
-                "price": 365000,
-                "price_formatted": "365.000₫"
+                "price": 295000,
+                "price_formatted": "295.000₫"
               },
               {
                 "thickness": "3.2mm",
-                "price": 420000,
-                "price_formatted": "420.000₫"
+                "price": 355000,
+                "price_formatted": "355.000₫"
               },
               {
                 "thickness": "4mm",
-                "price": 425000,
-                "price_formatted": "425.000₫"
+                "price": 385000,
+                "price_formatted": "385.000₫"
               },
               {
                 "thickness": "4.2mm",
-                "price": 465000,
-                "price_formatted": "465.000₫"
+                "price": 455000,
+                "price_formatted": "455.000₫"
               },
               {
                 "thickness": "5mm",
-                "price": 495000,
-                "price_formatted": "495.000₫"
+                "price": 480000,
+                "price_formatted": "480.000₫"
               },
               {
                 "thickness": "5.2mm",
-                "price": 525000,
-                "price_formatted": "525.000₫"
+                "price": 560000,
+                "price_formatted": "560.000₫"
               },
               {
                 "thickness": "6mm",
@@ -2213,13 +1973,13 @@
               },
               {
                 "thickness": "8mm",
-                "price": 950000,
-                "price_formatted": "950.000₫"
+                "price": 920000,
+                "price_formatted": "920.000₫"
               },
               {
                 "thickness": "10mm",
-                "price": 1220000,
-                "price_formatted": "1.220.000₫"
+                "price": 1040000,
+                "price_formatted": "1.040.000₫"
               }
             ]
           },
@@ -2258,8 +2018,8 @@
       "name": "Tấm lấy sáng polycarbonate đặc 8mm",
       "category": "Tấm lợp lấy sáng Polycarbonate đặc",
       "category_slug": "polycarbonate_dac",
-      "price": 950000,
-      "price_formatted": "950.000₫",
+      "price": 920000,
+      "price_formatted": "920.000₫",
       "unit": "m²",
       "short_description": "Tấm Polycarbonate dạng đặc Everest Light - Trong suốt như kính, bền gấp 200 lần, chống UV tuyệt đối. Sản xuất từ nhựa nguyên sinh 100%, công nghệ Co-extrusion hiện đại.",
       "thumbnail": "/images/products/tam-polycarbonate-dac-ruot.jpg",
@@ -2290,7 +2050,7 @@
           "caption": "Ứng dụng tấm polycarbonate đặc trong xây dựng"
         },
         {
-          "url": "/images/products/bang-gia.jpg",
+          "url": "/images/products/tam-lop-lay-sang-Polycarbonate-dac-6.jpg",
           "alt": "Tấm polycarbonate đặc Everest Light",
           "caption": "Tấm polycarbonate đặc Everest Light"
         }
@@ -2367,53 +2127,48 @@
             "data": [
               {
                 "thickness": "1.2mm",
-                "price": 92000,
-                "price_formatted": "92.000₫"
-              },
-              {
-                "thickness": "1.2mm Đủ",
-                "price": 110000,
-                "price_formatted": "110.000₫"
+                "price": 105000,
+                "price_formatted": "105.000₫"
               },
               {
                 "thickness": "1.6mm",
-                "price": 155000,
-                "price_formatted": "155.000₫"
+                "price": 140000,
+                "price_formatted": "140.000₫"
               },
               {
                 "thickness": "2mm",
-                "price": 235000,
-                "price_formatted": "235.000₫"
+                "price": 185000,
+                "price_formatted": "185.000₫"
               },
               {
                 "thickness": "3mm",
-                "price": 365000,
-                "price_formatted": "365.000₫"
+                "price": 295000,
+                "price_formatted": "295.000₫"
               },
               {
                 "thickness": "3.2mm",
-                "price": 420000,
-                "price_formatted": "420.000₫"
+                "price": 355000,
+                "price_formatted": "355.000₫"
               },
               {
                 "thickness": "4mm",
-                "price": 425000,
-                "price_formatted": "425.000₫"
+                "price": 385000,
+                "price_formatted": "385.000₫"
               },
               {
                 "thickness": "4.2mm",
-                "price": 465000,
-                "price_formatted": "465.000₫"
+                "price": 455000,
+                "price_formatted": "455.000₫"
               },
               {
                 "thickness": "5mm",
-                "price": 495000,
-                "price_formatted": "495.000₫"
+                "price": 480000,
+                "price_formatted": "480.000₫"
               },
               {
                 "thickness": "5.2mm",
-                "price": 525000,
-                "price_formatted": "525.000₫"
+                "price": 560000,
+                "price_formatted": "560.000₫"
               },
               {
                 "thickness": "6mm",
@@ -2422,13 +2177,13 @@
               },
               {
                 "thickness": "8mm",
-                "price": 950000,
-                "price_formatted": "950.000₫"
+                "price": 920000,
+                "price_formatted": "920.000₫"
               },
               {
                 "thickness": "10mm",
-                "price": 1220000,
-                "price_formatted": "1.220.000₫"
+                "price": 1040000,
+                "price_formatted": "1.040.000₫"
               }
             ]
           },
@@ -2467,8 +2222,8 @@
       "name": "Tấm lấy sáng polycarbonate đặc 10mm",
       "category": "Tấm lợp lấy sáng Polycarbonate đặc",
       "category_slug": "polycarbonate_dac",
-      "price": 1220000,
-      "price_formatted": "1.220.000₫",
+      "price": 1040000,
+      "price_formatted": "1.040.000₫",
       "unit": "m²",
       "short_description": "Tấm Polycarbonate dạng đặc Everest Light - Trong suốt như kính, bền gấp 200 lần, chống UV tuyệt đối. Sản xuất từ nhựa nguyên sinh 100%, công nghệ Co-extrusion hiện đại.",
       "thumbnail": "/images/products/tam-polycarbonate-dac-ruot.jpg",
@@ -2499,7 +2254,7 @@
           "caption": "Ứng dụng tấm polycarbonate đặc trong xây dựng"
         },
         {
-          "url": "/images/products/bang-gia.jpg",
+          "url": "/images/products/tam-lop-lay-sang-Polycarbonate-dac-6.jpg",
           "alt": "Tấm polycarbonate đặc Everest Light",
           "caption": "Tấm polycarbonate đặc Everest Light"
         }
@@ -2576,53 +2331,48 @@
             "data": [
               {
                 "thickness": "1.2mm",
-                "price": 92000,
-                "price_formatted": "92.000₫"
-              },
-              {
-                "thickness": "1.2mm Đủ",
-                "price": 110000,
-                "price_formatted": "110.000₫"
+                "price": 105000,
+                "price_formatted": "105.000₫"
               },
               {
                 "thickness": "1.6mm",
-                "price": 155000,
-                "price_formatted": "155.000₫"
+                "price": 140000,
+                "price_formatted": "140.000₫"
               },
               {
                 "thickness": "2mm",
-                "price": 235000,
-                "price_formatted": "235.000₫"
+                "price": 185000,
+                "price_formatted": "185.000₫"
               },
               {
                 "thickness": "3mm",
-                "price": 365000,
-                "price_formatted": "365.000₫"
+                "price": 295000,
+                "price_formatted": "295.000₫"
               },
               {
                 "thickness": "3.2mm",
-                "price": 420000,
-                "price_formatted": "420.000₫"
+                "price": 355000,
+                "price_formatted": "355.000₫"
               },
               {
                 "thickness": "4mm",
-                "price": 425000,
-                "price_formatted": "425.000₫"
+                "price": 385000,
+                "price_formatted": "385.000₫"
               },
               {
                 "thickness": "4.2mm",
-                "price": 465000,
-                "price_formatted": "465.000₫"
+                "price": 455000,
+                "price_formatted": "455.000₫"
               },
               {
                 "thickness": "5mm",
-                "price": 495000,
-                "price_formatted": "495.000₫"
+                "price": 480000,
+                "price_formatted": "480.000₫"
               },
               {
                 "thickness": "5.2mm",
-                "price": 525000,
-                "price_formatted": "525.000₫"
+                "price": 560000,
+                "price_formatted": "560.000₫"
               },
               {
                 "thickness": "6mm",
@@ -2631,13 +2381,13 @@
               },
               {
                 "thickness": "8mm",
-                "price": 950000,
-                "price_formatted": "950.000₫"
+                "price": 920000,
+                "price_formatted": "920.000₫"
               },
               {
                 "thickness": "10mm",
-                "price": 1220000,
-                "price_formatted": "1.220.000₫"
+                "price": 1040000,
+                "price_formatted": "1.040.000₫"
               }
             ]
           },

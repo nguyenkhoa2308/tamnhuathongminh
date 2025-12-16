@@ -30,7 +30,9 @@ const sortOptions = [
 ];
 
 // Get unique thicknesses from products
-function getUniqueThicknesses(products: ReturnType<typeof getProductsByCategory>) {
+function getUniqueThicknesses(
+  products: ReturnType<typeof getProductsByCategory>
+) {
   const thicknesses = new Set<string>();
   products.forEach((p) => {
     if (p.specs?.thickness) {
@@ -103,13 +105,20 @@ export default function CategoryPage() {
     if (priceRange.min > 0 || priceRange.max > 0) {
       const price = product.price;
       if (priceRange.max === 0 && price < priceRange.min) return false;
-      if (priceRange.max > 0 && (price < priceRange.min || price > priceRange.max)) return false;
+      if (
+        priceRange.max > 0 &&
+        (price < priceRange.min || price > priceRange.max)
+      )
+        return false;
     }
     // Bestseller filter
     if (showBestseller && !product.bestseller) return false;
     // Thickness filter
     if (selectedThicknesses.length > 0) {
-      if (!product.specs?.thickness || !selectedThicknesses.includes(product.specs.thickness)) {
+      if (
+        !product.specs?.thickness ||
+        !selectedThicknesses.includes(product.specs.thickness)
+      ) {
         return false;
       }
     }
@@ -142,10 +151,10 @@ export default function CategoryPage() {
   return (
     <main className="bg-[#f5f5f5] min-h-screen">
       {/* Page Header with Breadcrumb */}
-      <section className="relative h-[160px] bg-cover bg-center bg-[url('/images/backgrounds/section2-g.jpg')]">
+      <section className="relative h-[200px] bg-cover bg-center bg-[url('/images/backgrounds/section2-g.jpg')]">
         <div className="absolute inset-0 bg-primary/80" />
         <div className="relative z-10 h-full flex flex-col items-center justify-center text-center px-4">
-          <h1 className="text-3xl md:text-4xl font-bold text-white mb-3">
+          <h1 className="text-2xl md:text-4xl font-bold text-white mb-3">
             {category.name}
           </h1>
           <nav className="flex items-center gap-2 text-white/80 flex-wrap justify-center">
@@ -193,9 +202,11 @@ export default function CategoryPage() {
             <aside
               className={`
                 transform transition-transform duration-300
-                ${showMobileFilter
-                  ? "fixed top-0 left-0 h-full w-[300px] max-w-[85vw] z-[101] bg-white overflow-y-auto translate-x-0"
-                  : "fixed top-0 left-0 h-full w-[300px] max-w-[85vw] z-[101] bg-white overflow-y-auto -translate-x-full lg:relative lg:translate-x-0"}
+                ${
+                  showMobileFilter
+                    ? "fixed top-0 left-0 h-full w-[300px] max-w-[85vw] z-[101] bg-white overflow-y-auto translate-x-0"
+                    : "fixed top-0 left-0 h-full w-[300px] max-w-[85vw] z-[101] bg-white overflow-y-auto -translate-x-full lg:relative lg:translate-x-0"
+                }
                 lg:sticky lg:top-24 lg:h-fit lg:w-72 lg:z-auto lg:bg-transparent
                 lg:overflow-visible lg:self-start flex-shrink-0
               `}
